@@ -1,5 +1,6 @@
-package education.java.fundamentals;
+package education.java.fundamentals.control.flow;
 
+import education.java.fundamentals.control.flow.SwitchStatements;
 import org.junit.Test;
 
 import java.nio.charset.Charset;

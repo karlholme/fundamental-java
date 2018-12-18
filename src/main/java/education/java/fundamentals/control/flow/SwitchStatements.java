@@ -1,4 +1,4 @@
-package education.java.fundamentals;
+package education.java.fundamentals.control.flow;
 
 public class SwitchStatements {
     /*

@@ -1,4 +1,4 @@
-package education.java.fundamentals;
+package education.java.fundamentals.control.flow;
 
 import java.util.Iterator;
 import java.util.List;
@@ -9,8 +9,18 @@ public class IfStatements {
      * Kika gärna på enhetstesterna för att få lite ledtrådar.
      */
 
+
+    /*
+     * Den här metoden skall returnera det talade språket för landet som den får in.
+     *  Om den inte får in 'Swedish' and 'Norwegian' så skall den returnera "Most likely English"
+     */
     public String getSpokenLanguageUsingIf(String country) {
-        return "fix me using if statements";
+        if(country.equals("Sweden")) {
+            return "Swedish";
+        } else if(country.equals("Norway")){
+            return "Norwegian";
+        }
+        return "Most likely English";
     }
 
     /*

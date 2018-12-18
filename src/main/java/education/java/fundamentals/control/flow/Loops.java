@@ -1,4 +1,4 @@
-package education.java.fundamentals;
+package education.java.fundamentals.control.flow;
 
 import java.util.List;
 

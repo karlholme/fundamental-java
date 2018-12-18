@@ -1,5 +1,6 @@
-package education.java.fundamentals;
+package education.java.fundamentals.control.flow;
 
+import education.java.fundamentals.control.flow.Loops;
 import org.junit.Test;
 import org.mockito.Mockito;
 

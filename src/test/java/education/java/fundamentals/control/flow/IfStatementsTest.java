@@ -1,5 +1,4 @@
-package education.java.fundamentals;
-
+package education.java.fundamentals.control.flow;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,6 +15,17 @@ public class IfStatementsTest {
     private IfStatements ifStatements = new IfStatements();
 
     @Test
+    public void getSpokenLanguageUsingIf() {
+        String swedenLanguage = ifStatements.getSpokenLanguageUsingIf("Sweden");
+        String norwayLanguage = ifStatements.getSpokenLanguageUsingIf("Norway");
+        String unknownCountryLanguage = ifStatements.getSpokenLanguageUsingIf(randomString());
+
+        assertEquals("Swedish", swedenLanguage);
+        assertEquals("Norwegian", norwayLanguage);
+        assertEquals("Most likely English", unknownCountryLanguage);
+    }
+
+    @Test
     public void returnSpokenLanguageIfPerson() {
         String personSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Person");
         String pigNotSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Pig");
@@ -30,16 +40,6 @@ public class IfStatementsTest {
         assertNotEquals("Danish", catThatDoesntSpeakDanish);
     }
 
-    @Test
-    public void fewLanguagesUsingIf() {
-        String swedenLanguage = ifStatements.getSpokenLanguageUsingIf("Sweden");
-        String norwayLanguage = ifStatements.getSpokenLanguageUsingIf("Norway");
-        String unknownCountryLanguage = ifStatements.getSpokenLanguageUsingIf(randomString());
-
-        assertEquals("Swedish", swedenLanguage);
-        assertEquals("Norwegian", norwayLanguage);
-        assertEquals("Most likely English", unknownCountryLanguage);
-    }
 
     @Test
     public void getWeekday() {
