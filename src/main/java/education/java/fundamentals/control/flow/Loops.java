@@ -2,7 +2,6 @@ package education.java.fundamentals.control.flow;
 
 import java.util.List;
 
-
     /*
      * Nu kommer ni få testa att lösa några uppgifter med hjälp av de olika typerna av loopar som en vanligtvis använder i java.
      */
