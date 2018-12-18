@@ -50,8 +50,8 @@ public class LoopsTest {
         List<String> toppings = Mockito.spy(new ArrayList<String>());
         fillListWithNiceToppings(toppings);
 
-        assertEquals(true, loops.containsUsingWhile(toppings, "mustard"));
-        assertEquals(false, loops.containsUsingWhile(toppings, "gurkmajonäs"));
+        assertEquals(true, loops.containsUsingDoWhile(toppings, "mustard"));
+        assertEquals(false, loops.containsUsingDoWhile(toppings, "gurkmajonäs"));
 
         verify(toppings, times(0)).contains(any());
         verify(toppings, times(0)).iterator();
