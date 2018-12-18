@@ -1,6 +1,5 @@
 package education.java.fundamentals.control.flow;
 
-import education.java.fundamentals.control.flow.SwitchStatements;
 import org.junit.Test;
 
 import java.nio.charset.Charset;
@@ -16,7 +15,7 @@ public class SwitchStatementsTest {
     public void manyLanguagesUsingSwitch() {
         String swedenLanguage = switchStatements.getSpokenLanguageUsingSwitch("Sweden");
         String norwayLanguage = switchStatements.getSpokenLanguageUsingSwitch("Norway");
-        String denmarkLanguage = switchStatements.getSpokenLanguageUsingSwitch("Danish");
+        String denmarkLanguage = switchStatements.getSpokenLanguageUsingSwitch("Denmark");
         String finlandLanguage = switchStatements.getSpokenLanguageUsingSwitch("Finland");
         String germanyLanguage = switchStatements.getSpokenLanguageUsingSwitch("Germany");
         String franceLanguage = switchStatements.getSpokenLanguageUsingSwitch("France");

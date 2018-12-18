@@ -4,36 +4,44 @@ import java.util.List;
 
 
     /*
-     * Nu kommer ni få testa att lösa några uppgifter med hjälp av de olika typerna av loopar som finns i javas collections-bibloteket
+     * Nu kommer ni få testa att lösa några uppgifter med hjälp av de olika typerna av loopar som en vanligtvis använder i java.
      */
 public class Loops {
+
     /*
-     * Här skall ni summera alla tal i listan som kommer in.
+     *  Denna metod skall summera alla tal i den lista som skickas in.
      */
     public int sumArrayOfIntegers(int[] numbers) {
         return -1;
     }
 
     /*
+     *  Nu skall ni skriva era egna contains-metoder. Och det på några olika sätt.
+     *  Containsmetoden tar in en lista som första argument, och ett objekt som andra.
+     *  Sedan vill den returnera true om objektet finns i listan, och annars false.
+     *  Såklart så får ni använda java.lang.Strings contains-metod.
      *
+     *  Här skall ni använda javas förkortade for-loop. Aka foreach-loop:
+     *    for(itemInList x : list) {}
      */
     public boolean containsUsingForEach(List<String> collection, String item) {
         return false;
     }
 
+    /*
+     * Nu skall ni skriva en metod med samma funktionalitet, men genom att använda
+     * en while-loop:
+     *    while(condition) {}
+     */
     public boolean containsUsingWhile(List<String> numbers, String item) {
-        boolean found = false;
-        int index = 0;
-
-        while(!found && index < numbers.size()) {
-            if(numbers.get(index).equals(item)) {
-                found = true;
-            }
-            index++;
-        }
-        return found;
+        return false;
     }
 
+    /*
+     *  Nu skall ni göra en tredje metod med samma funktionalitet. Men nu med
+     *  vår favvo, do while-loopen:
+     *     do {} while(condition)
+     */
     public boolean containsUsingDoWhile(List<String> numbers, String item) {
         return false;
     }

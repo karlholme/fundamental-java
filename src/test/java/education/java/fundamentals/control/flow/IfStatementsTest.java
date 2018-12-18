@@ -26,23 +26,7 @@ public class IfStatementsTest {
     }
 
     @Test
-    public void returnSpokenLanguageIfPerson() {
-        String personSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Person");
-        String pigNotSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Pig");
-        String personSpeakingNorwegian = ifStatements.getSpokenLanguageIfItIsAPerson("Norway", "Person");
-        String dogThatDoesntSpeakNorwegian = ifStatements.getSpokenLanguageIfItIsAPerson("Norway", "Person");
-        String catThatDoesntSpeakDanish = ifStatements.getSpokenLanguageIfItIsAPerson("Denmark", "Cat");
-
-        assertEquals("Swedish", personSpeakingSwedish);
-        assertEquals("Norwegian", personSpeakingNorwegian);
-        assertNotEquals("Swedish", pigNotSpeakingSwedish);
-        assertNotEquals("Norwegian", dogThatDoesntSpeakNorwegian);
-        assertNotEquals("Danish", catThatDoesntSpeakDanish);
-    }
-
-
-    @Test
-    public void getWeekday() {
+    public void getWeekdaysNumber() {
         int monday = ifStatements.getWeekdaysNumber("Monday");
         int tuesday = ifStatements.getWeekdaysNumber("Tuesday");
         int friday = ifStatements.getWeekdaysNumber("Friday");
@@ -54,6 +38,21 @@ public class IfStatementsTest {
         assertEquals(friday, 5);
         assertEquals(saturday, 6);
         assertEquals(sunday, 7);
+    }
+
+    @Test
+    public void getSpokenLanguageIfItIsAPerson() {
+        String personSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Person");
+        String pigNotSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Pig");
+        String personSpeakingNorwegian = ifStatements.getSpokenLanguageIfItIsAPerson("Norway", "Person");
+        String dogThatDoesntSpeakNorwegian = ifStatements.getSpokenLanguageIfItIsAPerson("Norway", "Person");
+        String catThatDoesntSpeakDanish = ifStatements.getSpokenLanguageIfItIsAPerson("Denmark", "Cat");
+
+        assertEquals("Swedish", personSpeakingSwedish);
+        assertEquals("Norwegian", personSpeakingNorwegian);
+        assertNotEquals("Swedish", pigNotSpeakingSwedish);
+        assertNotEquals("Norwegian", dogThatDoesntSpeakNorwegian);
+        assertNotEquals("Danish", catThatDoesntSpeakDanish);
     }
 
     @Test
