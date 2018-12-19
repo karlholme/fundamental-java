@@ -1,4 +1,4 @@
-package education.java.fundamentals.control.flow;
+package control.flow;
 
 import org.junit.Test;
 import org.mockito.Mockito;

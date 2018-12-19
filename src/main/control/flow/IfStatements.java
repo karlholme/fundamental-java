@@ -1,4 +1,4 @@
-package education.java.fundamentals.control.flow;
+package control.flow;
 
 /*
  * Hej, följande problem skall hjälpas med hjälp av if-satser!

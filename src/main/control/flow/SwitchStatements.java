@@ -1,4 +1,4 @@
-package education.java.fundamentals.control.flow;
+package control.flow;
 
 /*
  * Lös följande problem med hjälp av Switch-satser.
