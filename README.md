@@ -40,20 +40,20 @@ If not installed..., install Git Credential Manager for Windows:
 installera windows environment installer  
  
 ## Java
-Check if you have java 1.7 or 1.8 installed:
+Check if you have java 1.8 installed:
   
 1. Press Start
 1. Command Prompt
 1. Write "java -version" and press enter
 
-If you see something like "java version 1.7...", also make sure you have a JDK installed. 
+If you see something like "java version 1.8...", also make sure you have a JDK installed. 
 
 1. Write "javac -version" and press enter. (In order for this to work, path to JDK bin needs to have been added to the PATH in System variables.)
 
 If you get the message "javac is not recognized as an internal or external command, operable program or batch file.", or if in the previous step you didn't see something like "java version 1.7...", install java:
 
 
-1. Download [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jdk-7u80-oth-JPR)
+1. Download [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     1. Select Windows x64
     1. Click the "Run" button to install the dowmloaded file
     1. Click "Yes" and follow installation instructions (go with default options, i.e. press next until complete)
@@ -73,12 +73,12 @@ Check if maven is installed:
 1. Command Prompt
 1. Write "mvn --version" and press enter
 
-If you see something like "Apache Maven 3.2.3. .." skip down to "2. Setup Maven settings.xml"
+If you see something like "Apache Maven 3.6.0. .." skip down to "2. Setup Maven settings.xml"
 
-If you did not see something like "Apache Maven 3.2.3. ..", install mvn:
+If you did not see something like "Apache Maven 3.6.0. ..", install mvn:
 
 1. Download [maven](http://maven.apache.org/download.cgi)
-    1. Select Maven 3.2.3. (Binary zip)
+    1. Select Maven 3.6.0. (Binary zip)
     1. Follow installation instructions on download page
 
 1. Setup Maven settings.xml
@@ -100,7 +100,7 @@ Check if IntelliJ is installed:
 
 1. Press Start
 1. All programs
-1. Check if you have a Jetbrains folder containing a IntelliJ IDEA 1. .1. version
+1. Check if you have a Jetbrains folder containing a IntelliJ IDEA
   
 If not, install IntelliJ:
 
