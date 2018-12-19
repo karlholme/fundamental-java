@@ -12,7 +12,7 @@ public class SwitchStatementsTest {
     SwitchStatements switchStatements = new SwitchStatements();
 
     @Test
-    public void manyLanguagesUsingSwitch() {
+    public void manyLanguagesUsingSwitchtest() {
         String swedenLanguage = switchStatements.getSpokenLanguageUsingSwitch("Sweden");
         String norwayLanguage = switchStatements.getSpokenLanguageUsingSwitch("Norway");
         String denmarkLanguage = switchStatements.getSpokenLanguageUsingSwitch("Denmark");
@@ -35,7 +35,7 @@ public class SwitchStatementsTest {
     }
 
     @Test
-    public void getWeekdayAsString() {
+    public void getWeekdayAsStringTest() {
         assertEquals(switchStatements.getWeekdayAsString(1), "Monday");
         assertEquals(switchStatements.getWeekdayAsString(2), "Tuesday");
         assertEquals(switchStatements.getWeekdayAsString(5), "Friday");

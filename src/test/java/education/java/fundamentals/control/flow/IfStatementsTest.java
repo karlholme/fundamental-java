@@ -15,7 +15,7 @@ public class IfStatementsTest {
     private IfStatements ifStatements = new IfStatements();
 
     @Test
-    public void getSpokenLanguageUsingIf() {
+    public void getSpokenLanguageUsingIfTest() {
         String swedenLanguage = ifStatements.getSpokenLanguageUsingIf("Sweden");
         String norwayLanguage = ifStatements.getSpokenLanguageUsingIf("Norway");
         String unknownCountryLanguage = ifStatements.getSpokenLanguageUsingIf(randomString());
@@ -26,7 +26,7 @@ public class IfStatementsTest {
     }
 
     @Test
-    public void getWeekdaysNumber() {
+    public void getWeekdaysNumberTest() {
         int monday = ifStatements.getWeekdaysNumber("Monday");
         int tuesday = ifStatements.getWeekdaysNumber("Tuesday");
         int friday = ifStatements.getWeekdaysNumber("Friday");
@@ -41,7 +41,7 @@ public class IfStatementsTest {
     }
 
     @Test
-    public void getSpokenLanguageIfItIsAPerson() {
+    public void getSpokenLanguageIfItIsAPersonTest() {
         String personSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Person");
         String pigNotSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Pig");
         String personSpeakingNorwegian = ifStatements.getSpokenLanguageIfItIsAPerson("Norway", "Person");
@@ -56,21 +56,14 @@ public class IfStatementsTest {
     }
 
     @Test
-    public void classifyPersonByAge() {
-        assertEquals("Infant", ifStatements.classifyPersonByAge(1));
-        assertEquals("Child", ifStatements.classifyPersonByAge(3));
-        assertEquals("Child", ifStatements.classifyPersonByAge(4));
-        assertEquals("Child", ifStatements.classifyPersonByAge(5));
-        assertEquals("Child", ifStatements.classifyPersonByAge(6));
-        assertEquals("Adult", ifStatements.classifyPersonByAge(25));
-        assertEquals("Adult", ifStatements.classifyPersonByAge(26));
-        assertEquals("Adult", ifStatements.classifyPersonByAge(27));
-        assertEquals("Adult", ifStatements.classifyPersonByAge(28));
-        assertEquals("Adult", ifStatements.classifyPersonByAge(29));
-        assertEquals("Adult", ifStatements.classifyPersonByAge(30));
-        assertEquals("Adult", ifStatements.classifyPersonByAge(35));
-        assertEquals("Middle Aged", ifStatements.classifyPersonByAge(50));
-        assertEquals("Senior", ifStatements.classifyPersonByAge(80));
+    public void classifyConsultantTest() {
+        assertEquals("Trainee", ifStatements.classifyConsultant(0));
+        assertEquals("Junior", ifStatements.classifyConsultant(1));
+        assertEquals("Junior", ifStatements.classifyConsultant(2));
+        assertEquals("Normal", ifStatements.classifyConsultant(3));
+        assertEquals("Normal", ifStatements.classifyConsultant(4));
+        assertEquals("Senior", ifStatements.classifyConsultant(5));
+        assertEquals("Senior", ifStatements.classifyConsultant(25));
     }
 
     private String randomString() {
