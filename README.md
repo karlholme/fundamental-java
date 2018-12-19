@@ -80,20 +80,6 @@ If you did not see something like "Apache Maven 3.6.0. ..", install mvn:
 1. Download [maven](http://maven.apache.org/download.cgi)
     1. Select Maven 3.6.0. (Binary zip)
     1. Follow installation instructions on download page
-
-1. Setup Maven settings.xml
-    1. If you just installed Maven, skip to step 6.
-    1. Browse to C:\Program Files\Apache Software Foundation\apache-maven-3.2.3\conf (or the corresponding directory if you have Maven installed somewhere else).
-    1. Open the file settings.xml
-    1. make sure the node <profiles> has a child node that points to the url "http://cuso.edb.se/artifactory/lfes-snapshot/"
-    1. If the node doesn't exist or points to the wrong url, continue with step 6. If it is correct, you are done!
-	1. go to [http://cuso.edb.se/stash/projects/ENMI/repos/environment.development/browse/maven?at=refs%2Fheads%2Fdevelop](http://cuso.edb.se/stash/projects/ENMI/repos/environment.development/browse/maven?at=refs%2Fheads%2Fdevelop)
-	1. click "settings.xml"
-	1. in the top right corner, click "RAW file". This will download the file settings.xml
-	1. find the downloaded file on your system. rename it "settings.xml" if the name has changed (for instance it might be named maven-settings.xml)
-	1. copy the file and paste it into C:\Program Files\Apache Software Foundation\apache-maven-3.2.3\conf (or into the corresponding directory if you installed Maven somewhere else). Choose to overwrite the existing file.
-	1. create a directory under "C" drive called "tools\maven_repo\repository" as follows "C:\tools\maven_repo\repository".
-	1. once the folder is created, copy the same "settings.xml" and paste it into the "C:\tools\maven-repo\settings.xml"
 	
 ## IntelliJ
 Check if IntelliJ is installed:
