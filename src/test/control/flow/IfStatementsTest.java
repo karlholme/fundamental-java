@@ -45,13 +45,13 @@ public class IfStatementsTest {
         String personSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Person");
         String pigNotSpeakingSwedish = ifStatements.getSpokenLanguageIfItIsAPerson("Sweden", "Pig");
         String personSpeakingNorwegian = ifStatements.getSpokenLanguageIfItIsAPerson("Norway", "Person");
-        String dogThatDoesntSpeakNorwegian = ifStatements.getSpokenLanguageIfItIsAPerson("Norway", "Person");
+        String cowThatDoesntSpeakNorwegian = ifStatements.getSpokenLanguageIfItIsAPerson("Norway", "Cow");
         String catThatDoesntSpeakDanish = ifStatements.getSpokenLanguageIfItIsAPerson("Denmark", "Cat");
 
         assertEquals("Swedish", personSpeakingSwedish);
         assertEquals("Norwegian", personSpeakingNorwegian);
         assertNotEquals("Swedish", pigNotSpeakingSwedish);
-        assertNotEquals("Norwegian", dogThatDoesntSpeakNorwegian);
+        assertNotEquals("Norwegian", cowThatDoesntSpeakNorwegian);
         assertNotEquals("Danish", catThatDoesntSpeakDanish);
     }
 

@@ -36,3 +36,4 @@ Det kan vara till hjälp att tjuvkika på testerna.
 1. Öppna två fönster bredvid varandra. (högerklicka på flik > 'split verticaly').
 2. Go to definition (ctrl+click).
 3. Find usages (högerklicka > 'find usages').
+4. Multicursors?
