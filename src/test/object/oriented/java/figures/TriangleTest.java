@@ -12,13 +12,25 @@ public class TriangleTest {
 
     @Before
     public void before() throws SystemException {
-         triangle = new Triangle(100);
+         triangle = new Triangle(222);
     }
 
     @Test
     public void TriangleBaseSetterTest() throws SystemException {
         triangle.setBase(1);
         assertEquals(1, triangle.getBase());
+    }
+
+    @Test
+    public void TriangleBaseSetterHighValueTest() throws SystemException {
+        triangle.setBase(300);
+        assertEquals(222, triangle.getBase());
+    }
+
+    @Test
+    public void TriangleBaseSetterHighValueTest() throws SystemException {
+        triangle.setBase(0);
+        assertEquals(222, triangle.getBase());
     }
 
     @Test

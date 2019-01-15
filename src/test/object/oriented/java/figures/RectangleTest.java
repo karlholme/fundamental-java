@@ -22,6 +22,18 @@ public class RectangleTest {
     }
 
     @Test
+    public void rectangleSetterHighValueTest() throws SystemException {
+        rectangle.setBase(300);
+        assertEquals(100, rectangle.getBase());
+    }
+
+    @Test
+    public void rectangleSetterLowValueTest() throws SystemException {
+        rectangle.setBase(0);
+        assertEquals(100, rectangle.getBase());
+    }
+
+    @Test
     public void rectangleDoubleSetterTest() throws SystemException {
         rectangle.setBase(2.0);
         assertEquals(2, rectangle.getBase());

@@ -6,7 +6,7 @@ public class Rectangle implements Figure {
     public double height;
     public Double area = null;
 
-    public Integer getArea(){
+    public Double getArea(){
         area = base * height;
         return area;
     }

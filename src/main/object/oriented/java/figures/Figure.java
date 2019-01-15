@@ -4,6 +4,6 @@ import object.oriented.java.SystemException;
 
 public interface Figure {
 
-	public Integer getArea() throws SystemException;
+	public Double getArea() throws SystemException;
 
 }

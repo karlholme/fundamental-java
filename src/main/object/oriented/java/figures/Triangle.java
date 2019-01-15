@@ -6,7 +6,7 @@ public class Triangle implements Figure {
 	public Long height;
 	public Double area = null;
 
-	public Integer getArea() {
+	public Double getArea() {
 		area = base * height / 2;
 		return area;
 	}

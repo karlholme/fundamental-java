@@ -3,28 +3,32 @@
 
 Tanke på upplägg: Sitt två och två, alt. tre och tre. Läs uppgifterna tillsammans, försök förstå vad som menas med de, **lös uppgifterna på egen hand** och diskutera därefter era lösningar och hur det ni just gjort relaterar till rubriken för uppgiften. Om någon hinner klart föra kan den givetvis hjälpa den andra. Det går såklart också bra att lösa uppgifterna själv.
 
-Vissa av uppgifterna kommer att vara lite luddiga. Och det är meningen. Ibland kommer det heller inte vara helt tydligt hur frågan relaterar till dess rubrik, men tanken är att det alltid skall finnas en koppling. Försök att lägga lite tid på att förstå koncepten i ett lite bredare perspektiv, snarare än att bara lösa uppgiften och gå vidare. Förstår ni inte tanken bakom en uppgift, diskutera med er kamrat eller fråga någon annan!
+Uppgifterna är uppdelade i olika koncept som alla har en paralell till Objekt-oritenterad programmering och Java. Försök att ta er tiden och förstå koncepten bakom frågorna, snarare än att bara lösa uppgifterna. Om det är något i uppgifterna, eller i koden som ni inte förstår, fråga er kamrat, internet eller någon annan kunnig!
 
 ### Access modifiers
-1. Använd javas access modifiers (public, private, protected) för att enkapsulera de olika formernas instans-varibabler. Ge samtidigt dessa en konstruktor, getters och setters.
+1. Använd javas access modifiers (public, private, protected) för att enkapsulera de olika formernas instans-varibabler. Det vill säga, gör instansvariablerna privata och ge dessa publika getters och setter. Ge också klassen en konstruktor.
 
-2. Att enkapsulera en klass instansvariabel ger oss mer kontroll över dessa. Till exempel är det lätt att kontrollera vilka värden som får sättas. Se nu till att triangelns set-metod bara tillåter jämna tal som bas. Returnera ett fel med felkod 1 om fel värde försöker sättas. Använd SystemException-klassen.
+2. Att enkapsulera en klass instansvariabel gör att vi får bättre kontroll över dessa. Till exempel är det lätt att kontrollera vilka värden som får sättas. Se nu till att ingen av formerna får ha ett värde under 1 och inte över 256, detta är det högsta värdet som vår applikation anses klara av. Om något annat värde kommer in skall metoden inte sätta något värde!
 
-3. Triangeln bör ha två konstruktorer. En som tar både basen och höjden, och en som bara tar bas. Om den senare används skall höjden sättas till basen * 2.
+3. Ge triangeln två konstruktorer. En som tar både basen och höjden, och en som bara tar bas. Om den senare används skall höjden sättas till basen * 2.
 
-4. Se nu till att ingen av formerna får ha ett värde under 1. Om detta sker så skall ett fel, med felkod 2, kastas.
+4. Se nu till att fyrkanten (Rectangle) bara får ha jämna värden som höjd.
 
-5. Flytta klassen ’SomeHelperClass’ till ett nytt paket och och ge paketet och klassen namn som ni tycker passar. Fundera på om ni kan göra något för att TestCase-klassen får använda somHelperCass metoder.
+5. Flytta klassen ’SomeHelperClass’ till ett nytt eget paket, och döp paketet till något som ni tycker är lämpligt. Rätta till felen i someHelperClass så att de följer figuernas nya gränssnitt.
+
+6. Fundera på om ni kan göra något för att ge TestCase-klassen tillgång till getFigure-metoden i somHelperClass.
 
 ### Wrapperklasser & autoboxing
-1. Se till så att alla instansvariabler är av en rimlig typ. Tumregeln är att använda de primitiva typerna i den utsträckning som det går då wrappade typer generellt tar upp mer minne. En annan skillnad är att de, till skillnad från de primitiva typerna, kan vara null.
+1. Se till så att alla instansvariabler är av en rimlig typ. Tumregeln är att använda de primitiva typerna i den utsträckning som det går då wrappade typer generellt tar upp mer minne. Lägg märke till att de primitiva typerna inte längre kan vara null.
 
-2. Se nu till att figurerna har setters som klarar av olika typ av input. Dessa skall klara av att få in Integer, Double och värdet som en sträng. Till exempel: setBase(String base), setBase(Integer base), setBase(Double base). Wrapperklasserna har en valueOf()-metod som kan komma till användning. Se till att fånga upp eventuella fel som kan tänkas uppkomma, som till exempel om en sträng innehåller annat än bara siffror och punkter eller är null. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta löser Java åt oss och det kallas autoboxing alt. unboxing.
+2. Se nu till att figurerna har setters som klarar av olika typ av input. Dessa skall klara av att få in Integers, Doubles och värden i form av strängar. _Till exempel: setBase(String base), setBase(Integer base), setBase(Double base)_. Wrapperklasserna har en valueOf()-metod som kan komma till användning. Det kan även komma attt bli nödvändigt att casta typer på andra vis. Se till att fånga upp eventuella fel som kan tänkas uppkomma, som till exempel om en sträng innehåller annat än bara siffror och punkter, eller är null.
 
-3. Se över så att valideringen ni lade till i de olika set-metoderna fortfarande verkar fungerar.
+3. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta löser Java åt oss och det är det som kallas för autoboxing dvs när en primitiv typ görs om till en wrapper-typ, eller unboxing som är vise-versa.
+
+4. Se över så att logiken ni lade till i de olika set-metoderna fortfarande fungerar genom att köra enhetstesterna.
 
 ### Magic numbers
-Magic numbers, som ni bekantat er med i kursen om kodkvalité, är kort och gott siffror som används i koden för att uppfylla ett visst syfte, men vars syfte är svårt att förstå genom att enbart läsa koden. Därför är det trevligt att bryta ut dessa till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:
+Magic numbers, som ni bekantat er med i kursen om kodkvalité, är kort och gott siffror (eller i vissa fall strängar) som används i koden för att uppfylla ett visst syfte, men vars syfte är svårt att förstå genom att enbart läsa koden. Därför är det trevligt att bryta ut dessa till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:
 
     public class RequestTranslator {  
             
@@ -63,22 +67,24 @@ För oss ät detta svårt att förstå. Ger vi istället de magiska nummerna en 
          }
     }
 
-1. Gör om alla magiska nummer ni kan hitta i koden till konstanter och ge dem ett namn som beskriver vad dessa faktiskt är.
+1. Diskutera om det finns några nummer i er kod som skulle kunna brytas ut till konstanter för att göra koden mer läsbar. Om ni hittar några sådana exempel, gör om dessa.
 
 ### Abstrakta klasser & Interfaces
 1.	En fördel med abstrakta klasser är att man kan definiera beteenden som alla sub-klasser får. Gör nu om Figure-interfacet till en abstrakt klass och se om det är någon logik som implementerats fler än en gång, som går att bryta ut och lägga i er nya superklass.
 
-2. Interfaces är någon som kan upplevas som krångligt, men som egentligen är ett ganska enkelt koncept. Det ett interface gör är att definiera ett antal metoder, med inparametrar, namn och returtyp som en klass som implementerar ett interface MÅSTE ha. Det är alltså en garanti på att gränssnittet ser ut på ett visst sätt, och låter den som konsumerar det vara säker på att vissa saker finns, och kan användas på ett visst sätt. Som ett kontrakt. Det påminner lite om en abstrakt klass, men ett interface innehåller ingen logik, utan endast en specifikation av metodsignaturer.
+2. Se till så att testerna fortfarande går igenom.
 
-3. Ett ofta använt interface är Comparator<>-interfacet. Det är också ett bra exempel på hur simpelt, men kraftfullt, ett interface kan vara. Vi vill ni kunna sortera våra figurer utefter Area. För att kunna använda inbygda sorteringsmetoder så måste vi tala om för sorterings-funktionen hur våra figurer skall jämföras. Det gör vi genom att skapa en klass som använder sig av Comparator-interfacet:
+3. Interfaces är någon som kan upplevas som krångligt, men som egentligen är ett ganska enkelt koncept. Det ett interface gör är att definiera ett antal metod-signaturer med inparametrar, namn och returtyp som en klass som implementerar ett interface MÅSTE ha. Det är en garanti på att gränssnittet ser ut på ett visst sätt, och låter den som konsumerar det vara säker på att vissa nyckelsaker alltid finns, och kan användas på ett visst sätt. **Som ett kontrakt.** Det påminner lite om en abstrakt klass, men ett interface innehåller ingen logik, utan endast en specifikation av metodsignaturer.
+
+4. Ett ofta använt interface är Comparator<>-interfacet. Det är också ett bra exempel på hur simpelt, men kraftfullt, ett interface kan vara. Vi vill nu kunna sortera våra figurer utefter Area. Men, för att kunna använda redan inbygda sorteringsmetoder så måste vi tala om för sorterings-funktionen hur våra figurer skall jämföras. Det gör vi genom att skapa en klass som använder sig av Comparator-interfacet:
    
     1. Skapa en ny klass som skall jämföra figurer efter dess area. Försök att hitta ett passande namn!
    
-    2. Låt klassen implementera interfacet Comparator<>
+    2. Låt klassen implementera interfacet Comparator<>.
    
-    3. Använd alt+enter när du står på den nu rödmarkerade klassignaturen, välj 'implement methods' och ta det första alternativet. Då kommer IntelliJ skapa skalet till alla metoder som Comparator-interfacet har definerat och som nu krävs.
+    3. Använd alt+enter när du står på den nu rödmarkerade klassignaturen, välj 'implement methods' och ta det första alternativet. Då kommer IntelliJ skapa skalet till alla metoder som Comparator-interfacet har definerat, som alltså nu krävs.
    
-    4. Comparator-interfacet, om implementerat korrekt, gör att vi kan jämföra olika former, och även sortera olika typer av datasamlingar. För oss gäller det nu att berätta för metoden hur den skall jämföra våra två figurer. Såhär säger interfacets beskrivning om metoden:
+    4. Comparator-interfacet, om implementerat korrekt, gör att vi kan jämföra olika former, och i förlägningen sortera olika typer av datasamlingar. För oss gäller det nu att berätta för den nu tomma metoden hur den skall jämföra våra två figurer. Såhär säger interfacets beskrivning om metoden:
     
     _Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than the second._
    

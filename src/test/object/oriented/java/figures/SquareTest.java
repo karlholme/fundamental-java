@@ -12,7 +12,7 @@ public class SquareTest {
 
     @Before
     public void before() throws SystemException {
-        square = new Square(10);
+        square = new Square(111);
     }
 
 
@@ -20,6 +20,18 @@ public class SquareTest {
     public void squareBaseSetterTest() throws SystemException {
         square.setBase(1);
         assertEquals(1, square.getBase());
+    }
+
+    @Test
+    public void squareBaseSetterHighValueTest() throws SystemException {
+        square.setBase(300);
+        assertEquals(111, square.getBase());
+    }
+
+    @Test
+    public void squareBaseSetterLowValueTest() throws SystemException {
+        square.setBase(0);
+        assertEquals(111, square.getBase());
     }
 
     @Test
