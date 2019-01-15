@@ -1,5 +1,6 @@
 package object.oriented.java.figures;
 
+import object.oriented.java.SystemException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -7,22 +8,22 @@ import static org.junit.Assert.assertEquals;
 
 public class TriangleTest {
 
-    Triangle triangle;
+    private Triangle triangle;
 
     @Before
-    public void before() {
-         triangle = new Triangle();
+    public void before() throws SystemException {
+         triangle = new Triangle(100);
     }
 
     @Test
-    public void TriangleBaseSetterTest() {
+    public void TriangleBaseSetterTest() throws SystemException {
         triangle.setBase(1);
         assertEquals(1, triangle.getBase());
     }
 
     @Test
-    public void TriangleBaseDoubleSetterTest() {
-        triangle.setBase(new Double(1.0));
+    public void TriangleBaseDoubleSetterTest() throws SystemException {
+        triangle.setBase(1.0);
         assertEquals(1, triangle.getBase());
     }
 
@@ -33,9 +34,10 @@ public class TriangleTest {
     }
 
     @Test
-    public void getAreaTest() {
-        triangle.setBase(1);
-        assertEquals(1.5, triangle.getArea());
+    public void getAreaTest() throws SystemException {
+        triangle.setBase(2);
+        triangle.setHeight(2);
+        assertEquals(2, triangle.getArea(), 0);
     }
 
 }

@@ -1,4 +1,5 @@
-# Lektion 2 & 3 - Java features
+----
+#Lektion 2 & 3 - Java features
 
 Tanke på upplägg: Sitt två och två, alt. tre och tre. Läs uppgifterna tillsammans, försök förstå vad som menas med de, **lös uppgifterna på egen hand** och diskutera därefter era lösningar och hur det ni just gjort relaterar till rubriken för uppgiften. Om någon hinner klart föra kan den givetvis hjälpa den andra. Det går såklart också bra att lösa uppgifterna själv.
 
@@ -7,20 +8,20 @@ Vissa av uppgifterna kommer att vara lite luddiga. Och det är meningen. Ibland 
 ### Access modifiers
 1. Använd javas access modifiers (public, private, protected) för att enkapsulera de olika formernas instans-varibabler. Ge samtidigt dessa en konstruktor, getters och setters.
 
-2. Att enkapsulera en klass instansvariabel ger oss mer kontroll över dessa. Till exempel är det lätt att kontrollera vilka värden som får sättas. Se nu till att triangeln bara tillåter jämna tal som bas. Returnera ett fel med felkod 1 om fel värde försöker sättas. Använd SystemException-klassen.
+2. Att enkapsulera en klass instansvariabel ger oss mer kontroll över dessa. Till exempel är det lätt att kontrollera vilka värden som får sättas. Se nu till att triangelns set-metod bara tillåter jämna tal som bas. Returnera ett fel med felkod 1 om fel värde försöker sättas. Använd SystemException-klassen.
 
 3. Triangeln bör ha två konstruktorer. En som tar både basen och höjden, och en som bara tar bas. Om den senare används skall höjden sättas till basen * 2.
 
-4. Se nu till att ingen av formerna får ha ett värde under 0. Om detta sker så skall ett fel, med felkod 2, kastas.
+4. Se nu till att ingen av formerna får ha ett värde under 1. Om detta sker så skall ett fel, med felkod 2, kastas.
 
-5. Flytta klassen ’SomeHelperClass’ till ett nytt paket och och ge paketet och klassen namn som ni tycker passar.
+5. Flytta klassen ’SomeHelperClass’ till ett nytt paket och och ge paketet och klassen namn som ni tycker passar. Fundera på om ni kan göra något för att TestCase-klassen får använda somHelperCass metoder.
 
 ### Wrapperklasser & autoboxing
 1. Se till så att alla instansvariabler är av en rimlig typ. Tumregeln är att använda de primitiva typerna i den utsträckning som det går då wrappade typer generellt tar upp mer minne. En annan skillnad är att de, till skillnad från de primitiva typerna, kan vara null.
 
 2. Se nu till att figurerna har setters som klarar av olika typ av input. Dessa skall klara av att få in Integer, Double och värdet som en sträng. Till exempel: setBase(String base), setBase(Integer base), setBase(Double base). Wrapperklasserna har en valueOf()-metod som kan komma till användning. Se till att fånga upp eventuella fel som kan tänkas uppkomma, som till exempel om en sträng innehåller annat än bara siffror och punkter eller är null. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta löser Java åt oss och det kallas autoboxing alt. unboxing.
 
-3. Se över så att valideringen ni lade till i de olika set-metoderna fortfarande fungerar. Tänk på att det bara är primitiva typer som kan jämföras med ’==’, annars får man använda metoder som finns i wrapperklasserna.
+3. Se över så att valideringen ni lade till i de olika set-metoderna fortfarande verkar fungerar.
 
 ### Magic numbers
 Magic numbers, som ni bekantat er med i kursen om kodkvalité, är kort och gott siffror som används i koden för att uppfylla ett visst syfte, men vars syfte är svårt att förstå genom att enbart läsa koden. Därför är det trevligt att bryta ut dessa till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:

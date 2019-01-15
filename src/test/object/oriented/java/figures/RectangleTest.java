@@ -1,5 +1,6 @@
 package object.oriented.java.figures;
 
+import object.oriented.java.SystemException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,36 +11,33 @@ public class RectangleTest {
     private Rectangle rectangle;
 
     @Before
-    public void before() {
-        rectangle = new Rectangle();
+    public void before() throws SystemException {
+        rectangle = new Rectangle(100, 100);
     }
 
     @Test
-    public void circleRadiusSetterTest() {
-        rectangle.setHeight(1);
+    public void rectangleSetterTest() throws SystemException {
         rectangle.setBase(2);
-        assertEquals(2, rectangle.getRadius());
+        assertEquals(2, rectangle.getBase());
     }
 
     @Test
-    public void circleRadiusSetterDoubleTest() {
-        rectangle.setHeight(2.0);
+    public void rectangleDoubleSetterTest() throws SystemException {
         rectangle.setBase(2.0);
-        assertEquals(4, rectangle.getRadius());
+        assertEquals(2, rectangle.getBase());
     }
 
     @Test
-    public void circleRadiusSetterStringTest() {
-        rectangle.setHeight("3");
+    public void rectangleStringSetterTest() {
         rectangle.setBase("3");
-        assertEquals(9, rectangle.getRadius());
+        assertEquals(3, rectangle.getBase());
     }
 
     @Test
-    public void getAreaTest() {
-        rectangle.setHeight(1);
-        rectangle.setBase();
-        assertEquals(3.14, rectangle.getArea());
+    public void getAreaTest() throws SystemException {
+        rectangle.setHeight(4);
+        rectangle.setBase(4);
+        assertEquals(16, rectangle.getArea(), 0);
     }
 
 }
