@@ -14,18 +14,18 @@ Uppgifterna är uppdelade i olika koncept som alla har en parallell till Objekt-
 
 4. Se nu till att fyrkanten (Rectangle) bara får ha jämna värden som höjd.
 
-5. Flytta klassen ’SomeHelperClass’ till ett nytt eget paket, och döp paketet till något som ni tycker är lämpligt. Rätta till felen i someHelperClass så att de följer figurernas nya gränssnitt.
+5. Flytta klassen ’SomeHelperClass’ till ett nytt paket, och döp paketet till något som ni tycker är lämpligt. Rätta till felen i someHelperClass så att de följer figurernas nya gränssnitt.
 
 6. Fundera på om ni kan göra något för att ge TestCase-klassen tillgång till getFigure-metoden i someHelperClass.
 
 ### Wrapperklasser & autoboxing
-1. Se till så att alla instansvariabler är av en rimlig typ. Tumregeln är att använda de primitiva typerna i den utsträckning som det går då wrappade typer generellt tar upp mer minne. Lägg märke till att de primitiva typerna inte längre kan vara null.
+1. Se till så att alla instansvariabler är av en rimlig typ. Tumregeln är att använda de primitiva typerna i den utsträckning som det går då wrappade typer generellt tar upp mer minne. Tänk på att de primitiva typerna inte kan vara null.
 
 2. Se nu till att figurerna har setters som klarar av olika typ av input. Dessa skall klara av att få in Integers, Doubles och värden i form av strängar. _Till exempel: setBase(String base), setBase(Integer base), setBase(Double base)_. Wrapperklasserna har en valueOf()-metod som kan komma till användning. Det kan även komma att bli nödvändigt att casta typer på andra vis. Se till att fånga upp eventuella fel som kan tänkas uppkomma, som till exempel om en sträng innehåller annat än bara siffror och punkter, eller är null.
 
-3. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta löser Java åt oss och det är det som kallas för autoboxing dvs när en primitiv typ görs om till en wrapper-typ, eller unboxing som är vise-versa.
+3. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta löser Java åt oss och det är det som kallas för autoboxing, dvs när en primitiv typ görs om till en wrapper-typ, eller unboxing som är vise versa.
 
-4. Se över så att logiken ni lade till i de olika set-metoderna fortfarande fungerar genom att köra enhetstesterna.
+4. Se till så att logiken ni lade till i de olika set-metoderna fungerar genom att köra enhetstesterna.
 
 ### Magic numbers
 Magic numbers, som ni bekantat er med i kursen om kodkvalité, är kort och gott siffror (eller i vissa fall strängar) som används i koden för att uppfylla ett visst syfte, men vars syfte är svårt att förstå genom att enbart läsa koden. Därför är det trevligt att bryta ut dessa till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:
@@ -88,7 +88,7 @@ För oss ät detta svårt att förstå. Ger vi istället de magiska nummerna en 
     
     _Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than the second._
    
- 5. Sortera listan i Main-klassen i TestCase genom att använda Collections sort-metod. Skriv sedan ut den sorterade listan för att undersöka om implementationen av jämförelsen blev korrekt.
+ 5. Sortera listan i Main-klassen i TestCase genom att använda Collections sort-metod. Skriv sedan ut den sorterade listan och säkerställ att figurerna nu skrivs ut i storleksordning.
 
 
 ### Pure functions & mutability
@@ -98,7 +98,7 @@ I så hög utsträckning som möjligt vill vi ha metoder som inte sparar data i 
 
 2. Ett bra sätt att undvika att spara data i en klass är att använda ett designmönster som brukar kallas för builder-pattern. En builder används istället för en klass vanliga konstruktor och fungerar så att den hela tiden returnerar sig själv. Det låter oss skriva metoder i en kedja och på så sätt sätta alla värden på builder-objektet. Objektet skapas först när man anropar dess Build-funktion.
 Vi skall nu använda ett sådant mönster i someHelperClass för att skapa våra figur-objekt:
-    1.	Till en början skall vi skapa en statisk, nästlad klass i vår Square-klass. Ge den namnet Builder.:
+    1.	Till en början skall vi skapa en statisk, nästlad klass i vår Square-klass. Ge den namnet Builder:
     public static final class Builder {}
     
     2.	Kopiera den yttre klassens instansvariabler till den nya, nästlade, klassen och gör dessa privata.
@@ -109,7 +109,7 @@ Vi skall nu använda ett sådant mönster i someHelperClass för att skapa våra
     
     5.	Låt först den yttre klassens konstuktor ta in en bulder, och utifrån dennes värden sätta instansvariablerna.
     
-    6 .	Skapa sedan build-metoden och låt den skapa en ny Square med sig själv (this) som argument till konstruktorn.
+    6.	Skapa sedan build-metoden och låt den skapa en ny Square med sig själv (this) som argument till konstruktorn.
 
 Detta är såklart ingen man måste göra manuellt varje gång, även om det är viktigt att känna till hur de är uppbyggda. Så för de andra klasserna, gör följande:
 1. Ladda ned addon:et InnerBuilder till Intellij
@@ -117,6 +117,8 @@ Detta är såklart ingen man måste göra manuellt varje gång, även om det är
 2. Gå in i de resterande formerna. Högerklicka > Generate > Builder. Välj sedan alla instansvariabler och skapa. Magi, ni har nu implementerat ett builder-pattern.
 
 3. Gör nu om getFigures()-metoden och använd era byggare för att skapa de objekt som skall läggas in i listan.
+
+4. Se till att TestCase fortfarande skriver ut formerna i storleksordning.
 
 ## IDEA-HACKS:
 1. Autogenerera getters, setters, konstruktorer:
