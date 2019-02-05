@@ -120,6 +120,25 @@ Detta är såklart ingen man måste göra manuellt varje gång, även om det är
 
 4. Se till att TestCase fortfarande skriver ut formerna i storleksordning.
 
+## LAMBDA:
+Lambda-uttryck är ett sätt att deklarera en funktion direkt i koden. Istället för att behöva skriva en metodsignatur på en rad, och sedan metodkroppen på efterföljande rader, kan man nu lösa allt detta på en enstaka rad. Till exempel;
+
+        public String addOne(int number){
+            return number + 1;
+        } 
+
+Samma metod fast med lambda:
+
+        (number) -> x + 1; 
+            
+1. Detta är användbart när man använder interfaces som bara kräver en metod. Då kan vi nämligen deklarera den metoden direkt, utan att behöva skapa nya filer, eller anonyma klasser. Använd nu lamda-syntaxen istället för figurkoperatorn när ni sorterar listan med former och ta bort den gamla figurkomparatorn.
+
+## DATASAMLINGAR
+1. Gör nu övningarna i collections-paketet. Där finns instruktioner om hur ni skall lösa uppgifterna.
+
+## STREAMS
+1. Gör nu övningarna i streams-paketet. Här komemr ni behöva använda er av lambda-uttryck. Löser ni alla uppgifter blir jag imponerad!
+
 ## IDEA-HACKS:
 1. Autogenerera getters, setters, konstruktorer:
     Högerklicka > Generate > välj..
