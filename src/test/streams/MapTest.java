@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.Assert.*;
 
-public class MapInterfaceTest {
+public class MapTest {
 
     Map map = new Map();
     List<String> participantNames = Arrays.asList("karl", "morgan", "sandra", "shakar", "rebecca", "sara", "yngve", "simon", "sofia", "caroline", "karl");

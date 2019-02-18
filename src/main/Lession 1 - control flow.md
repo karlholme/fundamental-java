@@ -5,9 +5,11 @@ Under det första tillfället kommer vi gå igenom vad vi kallar för control fl
 Java som vi använder för att styra kodens flöde. Detta innefattar if-satser, switch-satser och olika loopar.
 
 #### Ladda ned koden
- Öppna din favoritteminal, navigera till en lämplig mapp och skriv kommandot:
+ 1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
+ 2. Clona git länken för repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
+ 3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevTools", och skriv kommandot:
        		
-       git clone http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse.git
+        git clone [länken från stash]
        
 #### Öppna projektet i IntelliJ
 1. Öppna intelli J
