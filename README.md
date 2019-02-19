@@ -127,6 +127,13 @@ If not, install IntelliJ:
 1. Click View -> Tool Windows -> Maven Projects
 1. Click View -> Tool Buttons
 
+#### Ladda ned koden
+ 1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
+ 2. Clona git länken för repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
+ 3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevTools", och skriv kommandot:
+       		
+        git clone [länken från stash]
+
 #### Öppna projektet i IntelliJ
 1. Öppna intelli J
 2. Gå till file > open _(eller tryck på open direkt)_
@@ -141,8 +148,7 @@ Detta skall göra att intelliJ hämtar koden för de beroenden vi har, och kompi
 
     2a. Om alternativet inte finns, välj 'Mark directory as > Test', och testa igen.
 
-Testerna bör nu smälla, ni trodde väll inte att vi hade skrivit svaren åt er? 
-_(om in så kan vi behöva markera mappen för test och src)_
+Testerna bör nu smälla, ni trodde väll inte att vi hade skrivit svaren åt er?
 
 #### Let the coding beguin
 1. Om du känner dig ringrostig på Java kan du börja på 'Lession 1 - control flow', det behandlar enklare java-koncept såsom if-satser, loopar och switchsatser. Annars får man börja direkt på 'Lession 2 & 3 - Java features'.

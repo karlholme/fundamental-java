@@ -25,7 +25,7 @@ If you dont have maven installed
 ### Maven settings
 Maven has to be configured with a settings file. Download maven/settings.xml file from
 [here](http://cuso.edb.se/stash/projects/ENMI/repos/environment.development/browse/maven?at=refs%2Fheads%2Fdevelop) to ~/.m2/settings.xml
-Remove the override of `<localRepository>` in the settings.xml file
+Remove the override of `<localRepository>` in the settings.xml file. If you dont know your home folder (~/) type 'echo ~' into your favorit terminal.
 
 ## IntelliJ
 If you don't have IntelliJ,
@@ -38,9 +38,6 @@ If you don't have IntelliJ,
     1. Click OK
 
 ## Setup IntelliJ
-
-### Maven settings
-Remove the override of `<localRepository>`in lf\es\git\environment\development\maven\settings.xml
 
 ### Minimal setup
 
@@ -63,8 +60,15 @@ Remove the override of `<localRepository>`in lf\es\git\environment\development\m
     1. Write lf\es\git\environment\development\maven\settings.xml
     1. Click Apply
     1. Click OK
+    
+#### Ladda ned koden
+ 1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
+ 2. Clona git länken för repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
+ 3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevTools", och skriv kommandot:
+            
+        git clone [länken från stash]
 
-#### Öppna projektet i IntelliJ
+#### Öppna kod-projektet i IntelliJ
 1. Öppna intelli J
 2. Gå till file > open _(eller tryck på open direkt)_
 3. Leta upp vår POM.xml-fil.
