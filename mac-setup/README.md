@@ -57,7 +57,7 @@ If you don't have IntelliJ,
     1. Click New Window
 1. Select IntelliJ Preferences->Maven
     1. Check Override User settings file
-    1. Write lf\es\git\environment\development\maven\settings.xml
+    1. Write lf\es\git\environment\development\maven\settings.xml (or the path to your settings.xml file)
     1. Click Apply
     1. Click OK
     
