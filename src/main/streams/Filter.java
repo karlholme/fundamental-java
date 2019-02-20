@@ -1,6 +1,7 @@
 package streams;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Filter används för att, som det låter, filtrera ut vissa element, beroende på ett visst kritie.

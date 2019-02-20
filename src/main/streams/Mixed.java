@@ -2,7 +2,6 @@ package streams;
 
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Eftersom alla dessa metoder returnerar ett stream-objekt går dessa att kedja och man kan då
@@ -20,9 +19,14 @@ public class Mixed {
 
     /**
      * Den här metoden skall returnera en lista med de personerna som inte börjar på s,
-     * i bokstavordning och emd stora bokstäver.
+     * i bokstavordning och med stora bokstäver.
      */
     public List<String> getAllPersonsThatDontStartWithSInCAPITALS(List<String> names) {
         return null;
+    }
+
+
+    public int sumAllWords(List<List<String>> sentences) {
+        return 0;
     }
 }
