@@ -134,10 +134,14 @@ Samma metod fast med lambda:
 1. Detta är användbart när man använder interfaces som bara kräver en metod. Då kan vi nämligen deklarera den metoden direkt, utan att behöva skapa nya filer, eller anonyma klasser. Använd nu lamda-syntaxen istället för figurkoperatorn när ni sorterar listan med former och ta bort den gamla figurkomparatorn.
 
 ## DATASAMLINGAR
-1. Gör nu övningarna i collections-paketet. Där finns instruktioner om hur ni skall lösa uppgifterna.
+1. Gör nu övningarna i collections-paketet. Där finns instruktioner om hur ni skall lösa uppgifterna. Börja med SetInterfaceExercises.
 
 ## STREAMS
-1. Gör nu övningarna i streams-paketet. Här komemr ni behöva använda er av lambda-uttryck. Löser ni alla uppgifter blir jag imponerad!
+1. Gör nu övningarna i streams-paketet. Här komemr ni behöva använda er av lambda-uttryck. Löser ni alla uppgifter blir jag imponerad! Gör de i ordningen:
+    1. Filter
+    2. Map
+    3. Reduce
+    4. Mixed
 
 ## IDEA-HACKS:
 1. Autogenerera getters, setters, konstruktorer:
