@@ -1,0 +1,15 @@
+----
+#Lektion 4 - Unit tests, debugging and merge
+
+## Merge
+1. Merga koden från branchen "develop" in till master-branchen (om du inte skapat dig egna branch), genom att skriva:
+
+    `git merge develop`
+
+
+## Enhetstester
+1. Skriv tester till metoderna i unitTests-klassen. Vidare instruktioner finner ni där.
+
+
+## Debugging
+1. I test > debugging > debuggingTest finns ett antal tester och i main > debugging > Debugging finns dess tillhörande kod. Använd debuggerfunktionen i IntelliJ när ni kör testerna för att försöka förstå vad som är fel i koden och rätta till det så att testerna går igenom.
