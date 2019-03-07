@@ -4,7 +4,7 @@
 #### Välj nu något av följande områden som du känner att du vill arbeta med:
 
 ### Merge
-1. Merga koden från branchen "develop" in till master-branchen (om du inte skapat dig egna branch), genom att skriva:
+1. Merga koden från branchen "release_201901" in till master-branchen (om du inte skapat dig egna branch), genom att skriva:
 
     `git merge develop`
 
