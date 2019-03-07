@@ -63,6 +63,8 @@ public class IfStatementsTest {
         assertEquals("Normal", ifStatements.classifyConsultant(3));
         assertEquals("Normal", ifStatements.classifyConsultant(4));
         assertEquals("Senior", ifStatements.classifyConsultant(5));
+        assertEquals("Senior", ifStatements.classifyConsultant(10));
+        assertEquals("Senior", ifStatements.classifyConsultant(15));
         assertEquals("Senior", ifStatements.classifyConsultant(25));
     }
 
