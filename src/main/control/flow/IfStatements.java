@@ -34,9 +34,9 @@ public class IfStatements {
 
     /*
      * Nu skall ni klassificera personer efter deras ålder. Dvs:
-     *      - Trainee är de som jobbat under ett år
-     *      - Junior är de som jobbat mer än ett, men mindre än 3
-     *      - Normal är de som jobbat mer än 3, men mindre än 5
+     *      - Trainee är de som jobbat ett år eller mindre
+     *      - Junior är de som jobbat mer än ett men 3 eller färre år
+     *      - Normal är de som jobbat mer än 3, men mindre, eller = med 5
      *      - Senior är de som jobbat minst 5 år.
      */
     public String classifyConsultant(int age){

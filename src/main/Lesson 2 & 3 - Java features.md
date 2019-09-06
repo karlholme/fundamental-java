@@ -25,10 +25,11 @@ Uppgifterna är uppdelade i olika koncept som alla har en parallell till Objekt-
 
 3. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta löser Java åt oss och det är det som kallas för autoboxing, dvs när en primitiv typ görs om till en wrapper-typ, eller unboxing som är vise versa.
 
-4. Se till så att logiken ni lade till i de olika set-metoderna fungerar genom att köra enhetstesterna.
+4. Se till så att logiken ni lade till i de olika set-metoderna fungerar genom att avkommentera enhetstesterna för de
+ olika figurerna och se till så att dessa går igenom.
 
 ### Magic numbers
-Magic numbers, som ni bekantat er med i kursen om kodkvalité, är kort och gott siffror (eller i vissa fall strängar) som används i koden för att uppfylla ett visst syfte, men vars syfte är svårt att förstå genom att enbart läsa koden. Därför är det trevligt att bryta ut dessa till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:
+Magic numbers är kort och gott siffror (eller i vissa fall strängar) som används i koden för att uppfylla ett visst syfte, men vars syfte är svårt att förstå genom att enbart läsa koden. Därför är det trevligt att bryta ut dessa till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:
 
     public class RequestTranslator {  
             
@@ -44,7 +45,7 @@ Magic numbers, som ni bekantat er med i kursen om kodkvalité, är kort och gott
          }
     }
 
-För oss ät detta svårt att förstå. Ger vi istället de magiska nummerna en kontext blir det betydligt mycket mer läsbart:
+För oss är detta svårt att förstå. Ger vi istället de magiska nummerna en kontext blir det betydligt mycket mer läsbart:
 
     public class RequestTranslator {        
               
@@ -131,7 +132,9 @@ Samma metod fast med lambda:
 
         (number) -> x + 1; 
             
-1. Detta är användbart när man använder interfaces som bara kräver en metod. Då kan vi nämligen deklarera den metoden direkt, utan att behöva skapa nya filer, eller anonyma klasser. Använd nu lamda-syntaxen istället för figurkoperatorn när ni sorterar listan med former och ta bort den gamla figurkomparatorn.
+1. Detta är användbart när man använder interfaces som bara kräver en metod. Då kan vi nämligen deklarera den metoden
+ direkt, utan att behöva skapa nya filer, eller anonyma klasser. Använd nu lamda-syntaxen istället för
+  figur-komparatorn när ni sorterar listan med former och ta bort den gamla figur-komparatorn.
 
 ## DATASAMLINGAR
 1. Gör nu övningarna i collections-paketet. Där finns instruktioner om hur ni skall lösa uppgifterna. Börja med SetInterfaceExercises.

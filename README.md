@@ -84,15 +84,6 @@ If you did not see something like "Apache Maven 3.6.0. ..", install mvn:
 1. Download [maven](http://maven.apache.org/download.cgi)
     1. Select Maven 3.6.0. (Binary zip)
     1. Follow installation instructions on download page
-    
-2. Setup Maven settings.xml:
-    1. go to http://cuso.edb.se/stash/projects/ENMI/repos/environment.development/browse/maven?at=refs%2Fheads%2Fdevelop
-    2. click "settings.xml"
-    3. in the top right corner, click "RAW file". This will download the file settings.xml
-    4. find the downloaded file on your system. rename it "settings.xml" if the name has changed (for instance it might be named maven-settings.xml)
-    5. copy the file and paste it into C:\Program Files\Apache Software Foundation\apache-maven-3.2.3\conf (or into the corresponding directory if you installed Maven somewhere else). Choose to overwrite the existing file.
-    6. create a directory under "C" drive called "tools\maven_repo\repository" as follows "C:\tools\maven_repo\repository".
-    7. once the folder is created, copy the same "settings.xml" and paste it into the "C:\tools\maven-repo\settings.xml"
 	
 ## IntelliJ
 Check if IntelliJ is installed:
@@ -113,17 +104,9 @@ If not, install IntelliJ:
 
 ## Setup IntelliJ
 
-### Minimal setup
-
-1. Open IntelliJ 
-1. Select File->Settings->Maven
-    1. Next to the field "User settings file", check the box "override" 
-    1. Write "C:\tools\maven-repo\settings.xml" (without quotes)
-    1. Click Apply
-    1. Click OK
-
 ### Add quick buttons and Maven projects to Intellij GUI
 
+1. Open IntelliJ 
 1. Click View -> Tool Windows -> Maven Projects
 1. Click View -> Tool Buttons
 
@@ -151,4 +134,5 @@ Detta skall göra att intelliJ hämtar koden för de beroenden vi har, och kompi
 Testerna bör nu smälla, ni trodde väll inte att vi hade skrivit svaren åt er?
 
 #### Let the coding beguin
-1. Om du känner dig ringrostig på Java kan du börja på 'Lession 1 - control flow', det behandlar enklare java-koncept såsom if-satser, loopar och switchsatser. Annars får man börja direkt på 'Lession 2 & 3 - Java features'.
+1. Öppna MD-filen Lession 1 och följ instruktionerna. Om du tycker att det är för lätt kan du gå vidare till lektion
+ 2 & 3.

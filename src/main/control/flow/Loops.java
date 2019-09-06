@@ -64,8 +64,8 @@ public class Loops {
 
 
     /*
-     * Den här uppgiften är till och med ännu svårare. Nu får ni en lista i en lista.
-     * En litsa i 2 dimensioner. Eran uppgift är att returnera värdet på den positionen
+     * Den här uppgiften är till och med ännu svårare. Nu får ni flera listor i en lista.
+     * En lista i 2 dimensioner. Eran uppgift är att returnera värdet på den positionen
      * som efterfågas (index). Nu är dock index specificerat med både en bokstav och en
      * siffra. Dvs, D2 skall alltså returnera värdet i den 4e columnen (D) på den
      * andra (2) raden.
