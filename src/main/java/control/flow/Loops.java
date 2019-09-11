@@ -19,9 +19,9 @@ public class Loops {
 
  /*
   *  Nu skall ni skriva era egna contains-metoder. Och det på några olika sätt.
-  *  Containsmetoden tar in en lista som första argument, och ett objekt som andra.
+  *  En containsmetod tar in en lista som första argument, och ett objekt som andra.
   *  Sedan vill den returnera true om objektet finns i listan, och annars false.
-  *  Såklart så får ni använda java.lang.Strings contains-metod.
+  *  Såklart så får ni inte använda java.lang.Strings contains-metod.
   */
 
 
@@ -46,27 +46,17 @@ public class Loops {
 
     /*
      *  Nu skall ni göra en tredje metod med samma funktionalitet. Men nu med
-     *  vår favvo, do-while-loopen:
+     *  do-while-loopen:
      *     do {} while(condition)
      */
     public boolean containsUsingDoWhile(List<String> numbers, String item) {
         return false;
     }
 
-
     /*
-     * Nu till en lite svårare uppgift. Här får ni inte använda collections.get()-metoden.
-     * Det gäller alltså att tänkta utanför boxen!
-     */
-    public String getWithoutUsingGet(List<String> collection, int index) {
-        return "";
-    }
-
-
-    /*
-     * Den här uppgiften är till och med ännu svårare. Nu får ni flera listor i en lista.
-     * En lista i 2 dimensioner. Eran uppgift är att returnera värdet på den positionen
-     * som efterfågas (index). Nu är dock index specificerat med både en bokstav och en
+     * Den här uppgiften är meningen att vara svår, om du tycker den är övermäktig så kan du gå vidare.
+     * Nu får ni flera listor i en lista. Dvs en lista i 2 dimensioner. Er uppgift är att returnera värdet
+     * på den positionen som efterfågas (index). Nu är dock index specificerat med både en bokstav och en
      * siffra. Dvs, D2 skall alltså returnera värdet i den 4e columnen (D) på den
      * andra (2) raden.
      */

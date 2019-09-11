@@ -12,13 +12,12 @@ public class SwitchStatements {
      *  Och såklart resten. ("Most likley English").
      */
     public String getSpokenLanguageUsingSwitch(String country) {
-
         return "";
     }
 
 
     /*
-     * Den här metoden är den motsatta mot getWeekdaysNumber() från den förra delen.
+     * Den här metoden är den motsatta mot getWeekdaysNumber(), från den förra delen.
      * Den här kommer ta in ett nummner, och skall returnera den korresponderande veckordagens namn.
      */
     public String getWeekdayAsString(int weekdayNumber) {

@@ -59,15 +59,6 @@ public class LoopsTest {
     }
 
     @Test
-    public void getWithoutUsingGetTest() {
-        List<String> toppings = Mockito.spy(new ArrayList<String>());
-        fillListWithNiceToppings(toppings);
-
-        assertEquals("mayonnaise", loops.getWithoutUsingGet(toppings, 2));
-        verify(toppings, times(0)).get(anyInt());
-
-    }
-    @Test
     public void getLoopInALoopTest() {
         List<List<String>> secretMessage = new ArrayList<List<String>>();
 

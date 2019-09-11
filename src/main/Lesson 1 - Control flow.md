@@ -6,7 +6,7 @@ Java som vi använder för att styra kodens flöde. Detta innefattar if-satser, 
 
 #### Ladda ned koden
  1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
- 2. Clona git länken för repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
+ 2. Clona repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
  3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevTools", och skriv kommandot:
        		
         git clone [länken från stash]
@@ -14,10 +14,9 @@ Java som vi använder för att styra kodens flöde. Detta innefattar if-satser, 
 #### Öppna projektet i IntelliJ
 1. Öppna intelli J
 2. Gå till file > open _(eller tryck på open direkt)_
-3. Leta upp vår POM.xml-fil.
-4. Dra filen till maven-paletten som du hittar längst till vänster i intelliJ.
-
-Detta skall göra att intelliJ hämtar koden för de beroenden vi har, och kompillerar allt åt oss.
+3. Välj projektets map.
+4. Intellij brukar nu själv förstå att det är ett mavenprojekt och sätta upp projektet efter det. Om intellij själv
+ inte gör detta, leta upp POM.xml och dra filen till Maven-paletten till höger i IDE:n.
 
 #### Testa att köra testerna
 1. Öppna _src > test > control.flow_
@@ -25,16 +24,15 @@ Detta skall göra att intelliJ hämtar koden för de beroenden vi har, och kompi
 
     2a. Om alternativet inte finns, välj 'Mark directory as > Test', och testa igen.
 
-Testerna bör nu smälla, ni trodde väll inte att vi hade skrivit svaren åt er? 
-_(om in så kan vi behöva markera mappen för test och src)_
+Testerna bör nu smälla, ni trodde väll inte att vi hade skrivit svaren åt er?
 
-#### Let the coding begin
+#### Koda på!
 Försök nu att fylla på koden i de tomma metoderna, vars korresponderande tester smäller, tills de går igenom.
 Börja med IfStatements, gå sedan över till SwitchStatements och avsluta med Loops!
 
 Det kan vara till hjälp att tjuvkika på testerna.
 
-#### IDEA-HACKS
+#### IDEA-HACKS som kan vara trevliga att känna till
 1. Öppna två fönster bredvid varandra. (högerklicka på flik > 'split verticaly').
 2. Go to definition (ctrl+click).
 3. Find usages (högerklicka > 'find usages').

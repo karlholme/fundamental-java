@@ -12,7 +12,7 @@ public class SwitchStatementsTest {
     SwitchStatements switchStatements = new SwitchStatements();
 
     @Test
-    public void manyLanguagesUsingSwitchtest() {
+    public void manyLanguagesUsingSwitchTest() {
         String swedenLanguage = switchStatements.getSpokenLanguageUsingSwitch("Sweden");
         String norwayLanguage = switchStatements.getSpokenLanguageUsingSwitch("Norway");
         String denmarkLanguage = switchStatements.getSpokenLanguageUsingSwitch("Denmark");
