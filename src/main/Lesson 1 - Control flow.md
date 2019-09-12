@@ -37,3 +37,5 @@ Det kan vara till hjälp att tjuvkika på testerna.
 2. Go to definition (ctrl+click).
 3. Find usages (högerklicka > 'find usages').
 4. Multicursors?
+5. ctrl + alt + o = rensa importer (cmd + option + o för mac)
+6. ctrl + alt + l = pretty-print (cmd + option + l för mac)
