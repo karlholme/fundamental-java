@@ -58,7 +58,7 @@ public class IfStatementsTest {
     @Test
     public void classifyConsultantTest() {
         assertEquals("Trainee", ifStatements.classifyConsultant(0));
-        assertEquals("Junior", ifStatements.classifyConsultant(1));
+        assertEquals("Trainee", ifStatements.classifyConsultant(1));
         assertEquals("Junior", ifStatements.classifyConsultant(2));
         assertEquals("Standard", ifStatements.classifyConsultant(3));
         assertEquals("Standard", ifStatements.classifyConsultant(4));
