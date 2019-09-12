@@ -3,10 +3,10 @@ package control.flow;
 import java.util.ArrayList;
 import java.util.List;
 
-    /*
-     * Nu kommer ni få testa att lösa några uppgifter med hjälp av olika typer av
-     * loopar som en vanligtvis använder sig av inom java.
-     */
+/*
+ * Nu kommer ni få testa att lösa några uppgifter med hjälp av olika typer av
+ * loopar som en vanligtvis använder sig av inom java.
+ */
 public class Loops {
 
     /*
@@ -17,12 +17,12 @@ public class Loops {
     }
 
 
- /*
-  *  Nu skall ni skriva era egna contains-metoder. Och det på några olika sätt.
-  *  En containsmetod tar in en lista som första argument, och ett objekt som andra.
-  *  Sedan vill den returnera true om objektet finns i listan, och annars false.
-  *  Såklart så får ni inte använda java.lang.Strings contains-metod.
-  */
+    /*
+     *  Nu skall ni skriva era egna contains-metoder. Och det på några olika sätt.
+     *  En containsmetod tar in en lista som första argument, och ett objekt som andra.
+     *  Sedan vill den returnera true om objektet finns i listan, och annars false.
+     *  Såklart så får ni inte använda java.lang.Strings contains-metod.
+     */
 
 
     /*

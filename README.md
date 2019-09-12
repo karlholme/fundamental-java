@@ -113,7 +113,7 @@ If not, install IntelliJ:
 #### Ladda ned koden
  1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
  2. Clona git länken för repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
- 3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevTools", och skriv kommandot:
+ 3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevStuff", och skriv kommandot:
        		
         git clone [länken från stash]
 

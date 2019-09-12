@@ -33,13 +33,13 @@ public class IfStatements {
 
 
     /*
-     * Nu skall ni klassificera personer efter deras ålder. Dvs:
+     * Nu skall ni klassificera personer efter hur många år de arbetat i branchen. Dvs:
      *      - Trainee är de som jobbat ett år eller mindre
      *      - Junior är de som jobbat mer än ett men 3 eller färre år
      *      - Standard är de som jobbat mer än 3, men mindre, eller = med 5
      *      - Senior är de som jobbat minst 5 år.
      */
-    public String classifyConsultant(int age){
+    public String classifyConsultant(int age) {
         return "";
     }
 }
