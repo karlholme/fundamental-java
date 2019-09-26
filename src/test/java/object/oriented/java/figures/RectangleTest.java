@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class RectangleTest {
-//
+
 //    private Rectangle rectangle;
 //
 //    @Before

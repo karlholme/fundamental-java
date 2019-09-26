@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class SquareTest {
-//
+
 //    private Square square;
 //
 //    @Before
@@ -20,18 +20,6 @@ public class SquareTest {
 //    public void squareBaseSetterTest() throws SystemException {
 //        square.setBase(1);
 //        assertEquals(1, square.getBase());
-//    }
-//
-//    @Test
-//    public void squareBaseSetterHighValueTest() throws SystemException {
-//        square.setBase(300);
-//        assertEquals(111, square.getBase());
-//    }
-//
-//    @Test
-//    public void squareBaseSetterLowValueTest() throws SystemException {
-//        square.setBase(0);
-//        assertEquals(111, square.getBase());
 //    }
 //
 //    @Test
