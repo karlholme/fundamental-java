@@ -12,7 +12,7 @@ public class TriangleTest {
 //
 //    @Before
 //    public void before() throws SystemException {
-//         triangle = new Triangle(222);
+//         triangle = new Triangle(100);
 //    }
 //
 //    @Test
@@ -30,7 +30,7 @@ public class TriangleTest {
 //    @Test
 //    public void TriangleBaseSetterHighValueTest() throws SystemException {
 //        triangle.setBase(0);
-//        assertEquals(222, triangle.getBase());
+//        assertEquals(100, triangle.getBase());
 //    }
 //
 //    @Test
