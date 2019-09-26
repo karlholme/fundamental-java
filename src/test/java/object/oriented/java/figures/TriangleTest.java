@@ -12,7 +12,7 @@ public class TriangleTest {
 //
 //    @Before
 //    public void before() throws SystemException {
-//         triangle = new Triangle(100);
+//         triangle = new Triangle(100, 100);
 //    }
 //
 //    @Test
