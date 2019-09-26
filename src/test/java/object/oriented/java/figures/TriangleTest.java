@@ -8,8 +8,8 @@ import static org.junit.Assert.assertEquals;
 
 public class TriangleTest {
 
-//    private Triangle triangle;
-//
+    private Triangle triangle;
+
 //    @Before
 //    public void before() throws SystemException {
 //         triangle = new Triangle(100, 100);
@@ -24,7 +24,7 @@ public class TriangleTest {
 //    @Test
 //    public void TriangleBaseSetterHighValueTest() throws SystemException {
 //        triangle.setBase(300);
-//        assertEquals(222, triangle.getBase());
+//        assertEquals(100, triangle.getBase(), 0);
 //    }
 //
 //    @Test
