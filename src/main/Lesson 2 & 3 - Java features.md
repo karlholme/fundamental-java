@@ -6,19 +6,20 @@ Tanke på upplägg: Sitt två och två, alt. tre och tre. Läs uppgifterna tills
  rubriken för uppgiften. Om någon hinner klart föra kan den givetvis hjälpa den andra. Det går såklart också bra att
   lösa uppgifterna själv.
 
-Uppgifterna är uppdelade i olika koncept som alla har en parallell till Objekt-orienterad programmering och Java. F
-örsök att ta er tiden och förstå koncepten bakom frågorna, snarare än att bara lösa uppgifterna. Om det är något i
- uppgifterna, eller i koden som ni inte förstår, fråga er kamrat, internet eller någon annan kunnig!
+Uppgifterna är uppdelade i olika koncept som alla har en parallell till Objekt-orienterad programmering och Java. Försök
+att ta er tiden och förstå koncepten bakom frågorna, snarare än att bara lösa uppgifterna.
+
+Under den här lektionen kommer ni arbeta i mappen **object.oriented.java**!
 
 ### Access modifiers
 1. Använd javas access modifiers (public, private, protected) för att enkapsulera de olika formernas instans
 -variabler. Det vill säga, gör instansvariablerna privata och ge dessa publika getters och setter. Ge också klassen
  en konstruktor.
-2. Att enkapsulera en klass instansvariabel gör att vi får bättre kontroll över dessa. Till exempel är det lätt att
- kontrollera vilka värden som får sättas. Se nu till att ingen av formerna får ha ett värde under 1 och inte över 256
- , detta är det högsta värdet som vår applikation anses klara av. Om något annat värde kommer in skall metoden inte s
- ätta något värde!
-3. Ge triangeln två konstruktorer. En som tar både basen och höjden, och en som bara tar bas. Om den senare används
+2. Att enkapsulera en klass instansvariabel gör att vi får bättre kontroll över dessa. Ett exempel på detta är att vi
+ kan kontrollera vilka värden som faktiskt sätts. Se nu till att triangeln och rektanglen inte får ha ett värde under 1
+  och inte över 256 som bas, detta är det högsta värdet som vår applikation anses klara av. Om något annat värde
+   kommer in skall metoden inte sätta något värde!
+3. Ge triangeln två konstruktorer. En som tar både basen och höjden, och en som bara tar basen. Om den senare används
  skall höjden sättas till basen * 2
 4. Se nu till att fyrkanten (Rectangle) bara får ha jämna värden som höjd.
 5. Flytta klassen ’SomeHelperClass’ till ett nytt paket, och döp paketet till något som ni tycker är lämpligt. Rätta
@@ -29,14 +30,14 @@ Uppgifterna är uppdelade i olika koncept som alla har en parallell till Objekt-
 1. Se till så att alla instansvariabler är av en rimlig typ. Tumregeln är att använda de primitiva typerna i den
  utsträckning som det går då wrappade typer generellt tar upp mer minne. Tänk på att de primitiva typerna inte kan
   vara null.
-2. Se nu till att figurerna har setters som klarar av olika typ av input. Dessa skall klara av att få in Integers
-, Doubles och värden i form av strängar. _Till exempel: setBase(String base), setBase(Integer base), setBase(Double base)_.
+2. Se nu till att figurerna har flera olika setters som klarar av olika typ av input. Dessa skall klara av att få in
+ Integers, Doubles och värden i form av strängar. _Till exempel: setBase(String base), setBase(Integer base), setBase(Double base)_.
  Wrapperklasserna har en valueOf()-metod som kan komma till användning. Det kan även komma att bli nödvändigt att
   casta typer på andra vis. Se till att fånga upp eventuella fel som kan tänkas uppkomma, som till exempel om en str
   äng innehåller annat än bara siffror och punkter, eller är null.
 3. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta 
 löser Java åt oss och det är det som kallas för autoboxing, dvs när en primitiv typ görs om till en wrapper-typ
-, eller unboxing som är vise versa.
+, eller unboxing som är motsatsen.
 4. Se till så att logiken ni lade till i de olika set-metoderna fungerar genom att avkommentera enhetstesterna för de
  olika figurerna och se till så att dessa går igenom.
 
@@ -92,10 +93,10 @@ interfacet till en abstrakt klass och se om det är någon logik som implementer
 2. Se till så att testerna fortfarande går igenom.
 3. Interfaces är någon som kan upplevas som krångligt, men som egentligen är ett ganska enkelt koncept. Det ett
  interface gör är att definiera ett antal metod-signaturer med inparametrar, namn och returtyp som en klass som
-  implementerar ett interface MÅSTE ha. Det är en garanti på att gränssnittet ser ut på ett visst sätt, och låter den
+  implementerar ett interface **MÅSTE** ha. Det är en garanti på att gränssnittet ser ut på ett visst sätt, och låter den
    som konsumerar det vara säker på att vissa nyckelsaker alltid finns, och kan användas på ett visst sätt. **Som ett
-    kontrakt.** Det påminner lite om en abstrakt klass, men ett interface innehåller ingen logik, utan endast en
-     specifikation av metodsignaturer.
+    kontrakt.** Det påminner lite om en abstrakt klass, men ett interface innehåller ingen logik, utan specificerar
+     endast metodsignaturer.
 4. Ett ofta använt interface är Comparator<>-interfacet. Det är också ett bra exempel på hur simpelt, men kraftfullt
 , ett interface kan vara. Vi vill nu kunna sortera våra figurer utefter Area. Men, för att kunna använda redan
  inbyggda sorteringsmetoder så måste vi tala om för sorterings-funktionen hur våra figurer skall jämföras. Det gör vi
@@ -117,7 +118,7 @@ interfacet till en abstrakt klass och se om det är någon logik som implementer
 
 
 ### Pure functions & mutability
-I så hög utsträckning som möjligt vill vi ha metoder som inte sparar data i muterbar form. Det ökar risken för att
+I så hög utsträckning som möjligt vill vi ha metoder som **inte** sparar data i muterbar form. Det ökar risken för att
  data ligger kvar i senare skeden, är svårare att testa och ger upphov till fel som är svåra att identifiera. Ist
  ället vill vi ha vad som brukar kallas för ”pure functions”. Utmärkande för dessa är att de endast påverkas av den
   data de får in. **En viss indata ger alltså alltid samma utdata.**
@@ -168,3 +169,11 @@ Samma metod fast med lambda:
     
 2. Autogenerera konstanter, klasser, metoder:
     Högerklicka > Refactor > Extract
+    
+ Från förra tillfället:
+ 1. Öppna två fönster bredvid varandra. (högerklicka på flik > 'split verticaly').
+ 2. Go to definition (ctrl+click).
+ 3. Find usages (högerklicka > 'find usages').
+ 4. Multicursors?
+ 5. ctrl + alt + o = rensa importer (cmd + option + o för mac)
+ 6. ctrl + alt + l = pretty-print (cmd + option + l för mac)
