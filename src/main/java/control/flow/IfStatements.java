@@ -10,7 +10,13 @@ public class IfStatements {
      * Om den inte får in 'Sweden' eller 'Norway' så skall den returnera "Most likely English".
      */
     public String getSpokenLanguageUsingIf(String country) {
-        return "";
+        if(country == "Sweden") {
+            return "Swedish";
+        } else if(country == "Norway") {
+            return "Norwegian";
+        } else {
+            return "Most likely English";
+        }
     }
 
 
