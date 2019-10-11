@@ -6,7 +6,7 @@
 ### Merge
 1. Merga koden från branchen "release_201901" in till master-branchen (om du inte skapat dig egna branch), genom att skriva:
 
-    `git merge develop`
+    `git merge release_201901`
 
 
 ### Enhetstester
