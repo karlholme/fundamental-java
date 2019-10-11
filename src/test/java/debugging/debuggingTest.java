@@ -15,7 +15,7 @@ public class debuggingTest {
 
     @Test
     public void SquareAreaTest() {
-    assertEquals(6, debugging.countArea(3, 4, "Square"));
+    assertEquals(9, debugging.countArea(3, 4, "Square"));
     }
 
     @Test
