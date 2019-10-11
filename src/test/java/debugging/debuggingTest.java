@@ -20,7 +20,7 @@ public class debuggingTest {
 
     @Test
     public void CircleAreaTest() {
-        assertEquals(3.14, debugging.countArea(1, 1, "Circle"), 0.001);
+        assertEquals(3.14, debugging.countArea(1, 1, "Circle"), 0.01);
     }
 
 }
