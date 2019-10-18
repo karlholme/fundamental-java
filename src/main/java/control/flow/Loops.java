@@ -56,8 +56,7 @@ public class Loops {
      * Den här uppgiften är meningen att vara svår, om du tycker den är övermäktig så kan du gå vidare.
      * Nu får ni flera listor i en lista. Dvs en lista i 2 dimensioner. Er uppgift är att returnera värdet
      * på den positionen som efterfågas (index). Nu är dock index specificerat med både en bokstav och en
-     * siffra. Dvs, D2 skall alltså returnera värdet i den 4e columnen (D) på den
-     * andra (2) raden.
+     * siffra. Dvs, D2 skall alltså returnera värdet på fjärde raden (D) andra kolumnen.
      */
     public String getLoopInALoop(List<List<String>> collection, String index) {
         return "";

@@ -6,7 +6,7 @@ import org.mockito.Mockito;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
@@ -24,13 +24,13 @@ public class LoopsTest {
 
     @Test
     public void containsUsingForEachTest() {
-        List<String> toppings = Mockito.spy(new ArrayList<String>());
+        List<String> toppings = Mockito.spy(new ArrayList<>());
         fillListWithNiceToppings(toppings);
 
-        assertEquals(true, loops.containsUsingForEach(toppings, "mustard"));
-        assertEquals(false, loops.containsUsingForEach(toppings, "gurkmajonäs"));
+        assertTrue(loops.containsUsingForEach(toppings, "mustard"));
+        assertFalse(loops.containsUsingForEach(toppings, "gurkmajonäs"));
 
-        verify(toppings, times(0)).contains(any());
+        verify(toppings, never()).contains(any());
         verify(toppings, atLeast(1)).iterator();
     }
 
@@ -39,11 +39,11 @@ public class LoopsTest {
         List<String> toppings = Mockito.spy(new ArrayList<String>());
         fillListWithNiceToppings(toppings);
 
-        assertEquals(true, loops.containsUsingWhile(toppings, "mustard"));
-        assertEquals(false, loops.containsUsingWhile(toppings, "gurkmajonäs"));
+        assertTrue(loops.containsUsingWhile(toppings, "mustard"));
+        assertFalse(loops.containsUsingWhile(toppings, "gurkmajonäs"));
 
-        verify(toppings, times(0)).contains(any());
-        verify(toppings, times(0)).iterator();
+        verify(toppings, never()).contains(any());
+        verify(toppings, never()).iterator();
     }
 
     @Test
@@ -51,39 +51,39 @@ public class LoopsTest {
         List<String> toppings = Mockito.spy(new ArrayList<String>());
         fillListWithNiceToppings(toppings);
 
-        assertEquals(true, loops.containsUsingDoWhile(toppings, "mustard"));
-        assertEquals(false, loops.containsUsingDoWhile(toppings, "gurkmajonäs"));
+        assertTrue(loops.containsUsingDoWhile(toppings, "mustard"));
+        assertFalse(loops.containsUsingDoWhile(toppings, "gurkmajonäs"));
 
-        verify(toppings, times(0)).contains(any());
-        verify(toppings, times(0)).iterator();
+        verify(toppings, never()).contains(any());
+        verify(toppings, never()).iterator();
     }
 
     @Test
     public void getLoopInALoopTest() {
-        List<List<String>> secretMessage = new ArrayList<List<String>>();
+        List<List<String>> secretMessage = new ArrayList<>();
 
-        ArrayList<String> A = new ArrayList<String>();
+        ArrayList<String> A = new ArrayList<>();
         A.add("H");
         A.add("F");
         A.add("C");
         A.add("L");
         secretMessage.add(A);
 
-        ArrayList<String> B = new ArrayList<String>();
+        ArrayList<String> B = new ArrayList<>();
         B.add("V");
         B.add("W");
         B.add("X");
         B.add("Y");
         secretMessage.add(B);
 
-        ArrayList<String> C = new ArrayList<String>();
+        ArrayList<String> C = new ArrayList<>();
         C.add("K");
         C.add("G");
         C.add("S");
         C.add("C");
         secretMessage.add(C);
 
-        ArrayList<String> D = new ArrayList<String>();
+        ArrayList<String> D = new ArrayList<>();
         D.add("T");
         D.add("Y");
         D.add("X");
