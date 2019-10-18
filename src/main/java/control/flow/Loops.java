@@ -1,6 +1,5 @@
 package control.flow;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -13,12 +12,7 @@ public class Loops {
      *  Denna metod skall summera alla tal i den lista som skickas in.
      */
     public int sumArrayOfIntegers(int[] numbers) {
-        int sum = 0;
-        for(int i = 0; i<numbers.length; i++) {
-            sum = sum + numbers[i];
-        }
-
-        return sum;
+        return -1;
     }
 
 
@@ -45,15 +39,7 @@ public class Loops {
      *    while(condition) {}
      */
     public boolean containsUsingWhile(List<String> numbers, String item) {
-        boolean contains = false;
-        int i = 0;
-        while(i < numbers.size()) {
-            if(numbers.get(i) == item) {
-                return contains = true;
-            }
-            i++;
-        }
-        return contains;
+        return false;
     }
 
 
