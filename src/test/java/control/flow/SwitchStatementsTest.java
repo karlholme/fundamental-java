@@ -2,7 +2,7 @@ package control.flow;
 
 import org.junit.Test;
 
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
@@ -29,23 +29,23 @@ public class SwitchStatementsTest {
         assertEquals("Finnish", finlandLanguage);
         assertEquals("German", germanyLanguage);
         assertEquals("French", franceLanguage);
-        assertEquals("Spannish", spainLanguage);
-        assertEquals("Spannish", mexicoLanguage);
+        assertEquals("Spanish", spainLanguage);
+        assertEquals("Spanish", mexicoLanguage);
         assertEquals("Most likely English", unknownCountryLanguage);
     }
 
     @Test
     public void getWeekdayAsStringTest() {
-        assertEquals(switchStatements.getWeekdayAsString(1), "Monday");
-        assertEquals(switchStatements.getWeekdayAsString(2), "Tuesday");
-        assertEquals(switchStatements.getWeekdayAsString(5), "Friday");
-        assertEquals(switchStatements.getWeekdayAsString(6), "Saturday");
-        assertEquals(switchStatements.getWeekdayAsString(7), "Sunday");
+        assertEquals("Monday", switchStatements.getWeekdayAsString(1));
+        assertEquals("Tuesday", switchStatements.getWeekdayAsString(2));
+        assertEquals("Friday", switchStatements.getWeekdayAsString(5));
+        assertEquals("Saturday", switchStatements.getWeekdayAsString(6));
+        assertEquals("Sunday", switchStatements.getWeekdayAsString(7));
     }
 
     private String randomString() {
         byte[] array = new byte[7]; // length is bounded by 7
         new Random().nextBytes(array);
-        return new String(array, Charset.forName("UTF-8"));
+        return new String(array, StandardCharsets.UTF_8);
     }
 }
