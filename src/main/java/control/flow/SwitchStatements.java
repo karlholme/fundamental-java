@@ -12,27 +12,7 @@ public class SwitchStatements {
      *  Och såklart resten. ("Most likley English").
      */
     public String getSpokenLanguageUsingSwitch(String country) {
-
-        switch (country) {
-            case "Sweden":
-                return "Swedish";
-            case "Norway":
-                return "Norwegian";
-            case "Denmark":
-                return "Danish";
-            case "Finland":
-                return "Finish";
-            case "Germany":
-                return "German";
-            case "France":
-                return "French";
-            case "Spain":
-                return "Spanish";
-            case "Mexico":
-                return "Spanish";
-            default:
-                return "Most likely English";
-        }
+        return null;
     }
 
     /*
@@ -40,17 +20,6 @@ public class SwitchStatements {
      * Den här kommer ta in ett nummner, och skall returnera den korresponderande veckordagens namn. Om fel värde skickas in returnera "Error".
      */
     public String getWeekdayAsString(int weekdayNumber) {
-
-        switch (weekdayNumber) {
-            case 1: return "Monday";
-            case 2: return "Tuesday";
-            case 3: return "Wednesday";
-            case 4: return "Tuesday";
-            case 5: return "Friday";
-            case 6: return "Saturday";
-            case 7: return "Sunday";
-            default:
-                return "Error";
-        }
+        return null;
     }
 }

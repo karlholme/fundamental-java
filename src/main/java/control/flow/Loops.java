@@ -66,16 +66,6 @@ public class Loops {
      *     do {} while(condition)
      */
     public boolean containsUsingDoWhile(List<String> numbers, String item) {
-
-        int index = 0;
-
-        do {
-            if (numbers.get(index).equals(item)) {
-                return true;
-            }
-            index++;
-        } while (index < numbers.size());
-
         return false;
     }
 
@@ -87,13 +77,7 @@ public class Loops {
      * Ibland kan det vara till hjälp av rita upp listan för hand!
      */
     public String getLoopInALoop(List<List<String>> collection, String position) {
-
-        Character x = position.charAt(0);
-        String y = position.substring(1);
-
-        int xConverted = Character.getNumericValue(x) - 9;
-
-        return collection.get(xConverted - 1).get(Integer.valueOf(y) - 1);
+        return null;
     }
 
 }
