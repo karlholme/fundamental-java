@@ -55,5 +55,8 @@ Det kan vara till hjälp att tjuvkika på testerna.
 //TODO:
 För den erfarna:
 Säkerställ snygga och tydliga commit och välj bra commit namn!
-Skapa en PL request och lägg ledare i review!
+Skapa en PL request och lägg varandra som reviers!
+
+checka write tillgång till stash
+
 

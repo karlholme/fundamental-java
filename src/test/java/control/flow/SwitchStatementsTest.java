@@ -40,7 +40,7 @@ public class SwitchStatementsTest {
         assertEquals("Tuesday", switchStatements.getWeekdayAsString(2));
         assertEquals("Friday", switchStatements.getWeekdayAsString(5));
         assertEquals("Saturday", switchStatements.getWeekdayAsString(6));
-        assertEquals("Sunday", switchStatements.getWeekdayAsString(7));
+        assertEquals("Sunday", switchStatements.getWeekdayAsString(7));assertEquals("Error", switchStatements.getWeekdayAsString(9));
     }
 
     private String randomString() {

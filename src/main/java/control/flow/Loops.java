@@ -3,8 +3,9 @@ package control.flow;
 import java.util.List;
 
 /*
+ * KAFFEPAUS om du inte redan tagit kaffe! Och även om du gjort, ta en tilL!
  * Nu kommer ni få testa att lösa några uppgifter med hjälp av olika typer av
- * loopar som en vanligtvis använder sig av inom java.
+ * loopar som en vanligtvis använder sig av inom Java.
  */
 public class Loops {
 
@@ -12,9 +13,13 @@ public class Loops {
      *  Denna metod skall summera alla tal i den lista som skickas in.
      */
     public int sumArrayOfIntegers(int[] numbers) {
-        return -1;
-    }
+        int total = 0;
 
+        for (int number : numbers) {
+            total += number;
+        }
+        return total;
+    }
 
     /*
      *  Nu skall ni skriva era egna contains-metoder. Och det på några olika sätt.
@@ -25,13 +30,17 @@ public class Loops {
 
 
     /*
-     *  Här skall ni använda javas förkortade for-loop. A.k.a. foreach-loop:
+     *  Här skall ni använda Javas förkortade for-loop. A.k.a. foreach-loop:
      *    for(itemInList x : list) {}
      */
     public boolean containsUsingForEach(List<String> collection, String item) {
+        for (String word : collection) {
+            if (word.equals(item)) {
+                return true;
+            }
+        }
         return false;
     }
-
 
     /*
      * Nu skall ni skriva en metod med samma funktionalitet, men genom att använda
@@ -39,9 +48,17 @@ public class Loops {
      *    while(condition) {}
      */
     public boolean containsUsingWhile(List<String> numbers, String item) {
+
+        int index = 0;
+
+        while (index < numbers.size()) {
+            if (numbers.get(index).equals(item)) {
+                return true;
+            }
+            index++;
+        }
         return false;
     }
-
 
     /*
      *  Nu skall ni göra en tredje metod med samma funktionalitet. Men nu med
@@ -49,6 +66,16 @@ public class Loops {
      *     do {} while(condition)
      */
     public boolean containsUsingDoWhile(List<String> numbers, String item) {
+
+        int index = 0;
+
+        do {
+            if (numbers.get(index).equals(item)) {
+                return true;
+            }
+            index++;
+        } while (index < numbers.size());
+
         return false;
     }
 
@@ -59,7 +86,13 @@ public class Loops {
      * siffra. Dvs, D2 skall alltså returnera värdet på fjärde raden (D) andra kolumnen.
      */
     public String getLoopInALoop(List<List<String>> collection, String position) {
-        return "";
+
+        Character x = position.charAt(0);
+        String y = position.substring(1);
+
+        int xConverted = Character.getNumericValue(x) -9;
+
+        return collection.get(xConverted-1).get(Integer.valueOf(y)-1);
     }
 
 }
