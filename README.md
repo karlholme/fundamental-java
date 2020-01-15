@@ -85,30 +85,39 @@ If you did not see something like "Apache Maven 3.6.0. ..", install mvn:
     1. Select Maven 3.6.0. (Binary zip)
     1. Follow installation instructions on download page
 	
-## IntelliJ
+IntelliJ
 Check if IntelliJ is installed:
 
-1. Press Start
-1. All programs
-1. Check if you have a Jetbrains folder containing a IntelliJ IDEA
-  
+Press Start
+All programs
+Check if you have a Jetbrains folder containing a IntelliJ IDEA 1. .1. version
 If not, install IntelliJ:
 
-1. Download [Intellij Ultimate Edition](http://www.jetbrains.com/idea/download/)
-1. Follow installation instructions
-1. Use cuso licence server
-    1. When you first start Intellij, it will ask you for a licence
-    1. Click "Use licence server" 
-    1. In the server address field, paste the address http://cuso.edb.se/licenseserver
-	1. Click OK (don't click "discover server")
+Download Intellij Ultimate Edition
+Follow installation instructions
+Use cuso licence server
+When you first start Intellij, it will ask you for a licence
+Click "Use licence server"
+In the server address field, paste the address http://cuso.edb.se/licenseserver
+Click OK (don't click "discover server")
+Setup IntelliJ
+Windows tweak
+IntelliJ will save its internal stuff in a directory called somthing like .IntelliJIdea2018.3. By default it will reside in your home directory but again it will be subject to the malware scanned. Do you want to avoid that do as follows.
 
-## Setup IntelliJ
-
-### Add quick buttons and Maven projects to Intellij GUI
-
-1. Open IntelliJ 
-1. Click View -> Tool Windows -> Maven Projects
-1. Click View -> Tool Buttons
+Move the .IntelliJIdea2018.3 or similar named directory from your home directory (In windows something like C:\Users\E606194) to C:\Devstuff
+Open the file idea.properties in the directory called similar to C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin in your editor.
+Find the string idea.config.path and uncomment the line.
+Replace the path with the /Devstuff/.IntelliJIdea2018.3/config (or similar named directory)
+Find the string idea.system.path and uncomment the line.
+Replace the path with the /Devstuff/.IntelliJIdea2018.3/system (or similar named directory)
+Save the idea.properties file.
+Minimal setup
+Open IntelliJ
+Select File->Settings->Build, Execution, Deployment-> Build Tools->Maven
+Next to the field "User settings file", check the box "override" and write: "C:\DevStuff\tools\maven-repo\settings.xml" (without quotes)
+Next to the field "Local repository", check the box "override" and write: "C:\DevStuff\tools\maven_repo\repository" (without quotes)
+Click Apply
+Click OK
 
 #### Ladda ned koden
  1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
@@ -133,6 +142,6 @@ Detta skall göra att intelliJ hämtar koden för de beroenden vi har, och kompi
 
 Testerna bör nu smälla, ni trodde väll inte att vi hade skrivit svaren åt er?
 
-#### Let the coding beguin
+#### Let the coding begin
 1. Öppna MD-filen Lession 1 och följ instruktionerna. Om du tycker att det är för lätt kan du gå vidare till lektion
  2 & 3.
