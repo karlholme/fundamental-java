@@ -6,7 +6,7 @@ package control.flow;
 public class IfStatements {
 
     /*
-     * Den här metoden får in ett land som sträng, till exempel "Sweden". Er uppgift är att returnera landets talade språk.
+     * Den här metoden får in ett land som en sträng, till exempel "Sweden". Er uppgift är att returnera landets talade språk.
      * Om den inte får in 'Sweden' eller 'Norway' så skall den returnera "Most likely English".
      */
     public String getSpokenLanguageUsingIf(String country) {
@@ -21,7 +21,7 @@ public class IfStatements {
 
     /*
      * Den här metoden skall ta emot en veckodag som en sträng, och sedan returnera veckodagens nummer.
-     * Måndag skall alltså returnera 1, och torsdag 4.
+     * Måndag skall alltså returnera 1, och torsdag 4 osv.
      */
     public int getWeekdaysNumber(String weekday) {
 

@@ -3,14 +3,14 @@ package control.flow;
 import java.util.List;
 
 /*
- * KAFFEPAUS om du inte redan tagit kaffe! Och även om du gjort, ta en tilL!
+ * KAFFEPAUS om ni inte redan tagit kaffe! Och även om ni gjort det, ta en tilL!
  * Nu kommer ni få testa att lösa några uppgifter med hjälp av olika typer av
  * loopar som en vanligtvis använder sig av inom Java.
  */
 public class Loops {
 
     /*
-     *  Denna metod skall summera alla tal i den lista som skickas in.
+     *  Denna metod skall summera alla tal i en lista som skickas in.
      */
     public int sumArrayOfIntegers(int[] numbers) {
         int total = 0;
@@ -22,9 +22,9 @@ public class Loops {
     }
 
     /*
-     *  Nu skall ni skriva era egna contains-metoder. Och det på några olika sätt.
+     *  Nu skall ni skriva era egna contains-metoder, och detta på några olika sätt.
      *  En containsmetod tar in en lista som första argument, och ett objekt som andra.
-     *  Sedan vill den returnera true om objektet finns i listan, och annars false.
+     *  Sedan vill den returnera True om objektet finns i listan, och annars False.
      *  Såklart så får ni inte använda java.lang.Strings contains-metod.
      */
 
@@ -81,18 +81,19 @@ public class Loops {
 
     /*
      * Den här uppgiften är meningen att vara svår, om du tycker den är övermäktig så kan du gå vidare.
-     * Nu får ni flera listor i en lista. Dvs en lista i 2 dimensioner. Er uppgift är att returnera värdet
+     * Nu får ni flera listor i en lista. Dvs en lista i två dimensioner. Er uppgift är att returnera värdet
      * på den positionen som efterfågas. Nu är dock index specificerat med både en bokstav och en
      * siffra. Dvs, D2 skall alltså returnera värdet på fjärde raden (D) andra kolumnen.
+     * Ibland kan det vara till hjälp av rita upp listan för hand!
      */
     public String getLoopInALoop(List<List<String>> collection, String position) {
 
         Character x = position.charAt(0);
         String y = position.substring(1);
 
-        int xConverted = Character.getNumericValue(x) -9;
+        int xConverted = Character.getNumericValue(x) - 9;
 
-        return collection.get(xConverted-1).get(Integer.valueOf(y)-1);
+        return collection.get(xConverted - 1).get(Integer.valueOf(y) - 1);
     }
 
 }
