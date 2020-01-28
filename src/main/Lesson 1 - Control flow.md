@@ -24,10 +24,19 @@ Java som vi använder för att styra kodens flöde. Detta innefattar if-satser, 
 6. På samma sätt se till att "src"-mappen är markaderad som "Generated Sources Root" 
 
 ### Create a feature branch
+Innan vi börjar skapar vi en feature branch. Denna kan ni ha lokalt på er dator fram till dess att ni skapar en pull request som en kollega får godkänna! (Detta kan göras via Stash också.)
+
+1. Dra ner pom-filen i terminal så att du hmnar i rätt repository.
+2. git branch -a (ger dig alla lokala och onsite brancher)
+3. skriv git checkout feature/{namn_på_din_branch} -b (nu har du således skapar och ställt dig i din nya branch)
+4. Nu kan du börja koda! Om du inte pushar den kan ingen se ditt arbete. Se till att spara ditt arbete under tiden genom att köra "git commit -am "ett bra commit meddelande". OBS! genom att köra "-am" så commiar du alla ändringar samtiigt. Då är det enklare att använda sig av Version Control (Alt + 9) och högerklicka på respektive klasser.
+
+OBS! Om detta är svårt att förstå så förklarar vi gärna tydligare!
+
+
 //TODO: caroline sätt upp feature branch
 
-//TODO: Holme
-//Städa inlagd kod
+
 
 
 #### Testa att köra testerna
@@ -49,14 +58,9 @@ Det kan vara till hjälp att tjuvkika på testerna.
 4. Multicursors?
 5. ctrl + alt + o = rensa importer (cmd + option + o för mac)
 6. ctrl + alt + l = pretty-print (cmd + option + l för mac)
-
-
-
-//TODO:
-För den erfarna:
-Säkerställ snygga och tydliga commit och välj bra commit namn!
-Skapa en PL request och lägg varandra som reviers!
-
-checka write tillgång till stash
+7. Get suggestions to fix error (Alt+Enter)
+8. Remove row (Ctrl + y) 
+9. Highlight paragrath/words (Ctrl + Shift + Left/Right/Up/Down pointer)
+10. Refactor varible name (rename)  Highlight varilble and (Shift + F&)
 
 
