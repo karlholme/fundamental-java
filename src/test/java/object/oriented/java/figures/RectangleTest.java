@@ -18,31 +18,31 @@ public class RectangleTest {
 //    @Test
 //    public void rectangleSetterTest() throws SystemException {
 //        rectangle.setBase(2);
-//        assertEquals(2, rectangle.getBase());
+//        assertEquals(2, rectangle.getBase(), 0);
 //    }
 //
 //    @Test
 //    public void rectangleSetterHighValueTest() throws SystemException {
 //        rectangle.setBase(300);
-//        assertEquals(100, rectangle.getBase());
+//        assertEquals(100, rectangle.getBase(), 0);
 //    }
 //
 //    @Test
 //    public void rectangleSetterLowValueTest() throws SystemException {
 //        rectangle.setBase(0);
-//        assertEquals(100, rectangle.getBase());
+//        assertEquals(100, rectangle.getBase(), 0);
 //    }
 //
 //    @Test
 //    public void rectangleDoubleSetterTest() throws SystemException {
 //        rectangle.setBase(2.0);
-//        assertEquals(2, rectangle.getBase());
+//        assertEquals(2, rectangle.getBase(), 0);
 //    }
 //
 //    @Test
 //    public void rectangleStringSetterTest() {
 //        rectangle.setBase("3");
-//        assertEquals(3, rectangle.getBase());
+//        assertEquals(3, rectangle.getBase(), 0);
 //    }
 //
 //    @Test
@@ -51,5 +51,4 @@ public class RectangleTest {
 //        rectangle.setBase(4);
 //        assertEquals(16, rectangle.getArea(), 0);
 //    }
-
 }
