@@ -2,7 +2,7 @@
 #Lektion 2 & 3 - Java features
 
 Tanke på upplägg: Sitt två och två, alt. tre och tre. Läs uppgifterna tillsammans, försök förstå vad som menas med dem, **lös uppgifterna på egen hand** och diskutera därefter era lösningar och hur det ni just gjort relaterar till
- rubriken för uppgiften. Om någon hinner klart föra kan den givetvis hjälpa den andra.
+ rubriken för uppgiften. Om någon hinner klart före kan den givetvis hjälpa den andra.
 
 Uppgifterna är uppdelade i olika koncept som alla har en parallell till Objekt-orienterad programmering och Java. Försök
 att ta er tiden och förstå koncepten bakom frågorna, snarare än att bara lösa uppgifterna.
@@ -15,14 +15,13 @@ Under den här lektionen kommer ni arbeta i mappen **object.oriented.java**.
  en konstruktor.
 
 2. Att enkapsulera en klass instansvariabel gör att vi får bättre kontroll över dessa. Ett exempel på detta är att vi
- kan kontrollera vilka värden som faktiskt sätts. Se nu till att triangeln och rektanglen inte får ha ett värde under 1
-  och inte över 256 som bas, detta är det högsta värdet som vår applikation anses klara av. Om något annat värde
-   kommer in skall metoden inte sätta något värde!
+ kan kontrollera vilka värden som faktiskt sätts. Se nu till att triangeln och rektangeln inte får ha ett värde under 1 och inte över 256 som bas, detta är det högsta värdet som vår applikation anses klara av. Om något annat värde kommer in skall metoden inte sätta något värde!
 
 3. Ge triangeln två konstruktorer. En som tar både basen och höjden, och en som bara tar basen. Om den senare används
- skall höjden sättas till basen * 2
+ skall höjden sättas till basen * 2.
 
 4. Se nu till att fyrkanten (Rectangle) bara får ha jämna värden som höjd.
+
 5. Flytta klassen ’SomeHelperClass’ till ett nytt paket, och döp paketet till något som ni tycker är lämpligt. Rätta
  till felen i someHelperClass så att de följer figurernas nya gränssnitt.
  
@@ -42,9 +41,9 @@ Under den här lektionen kommer ni arbeta i mappen **object.oriented.java**.
 ### Magic numbers
 Magic numbers är kort och gott siffror (eller i vissa fall strängar) som används i koden för att uppfylla ett visst
  syfte, men vars syfte är svårt att förstå genom att enbart läsa koden. Därför är det trevligt att bryta ut dessa
-  till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:
+ till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:
 
-    public class RequestTranslator {  
+    public class RequestTranslator {
             
          private String translatePaymentFrequency(OriginalRequest request) {
              switch (request.getPaymentFrequency()) {
@@ -60,7 +59,7 @@ Magic numbers är kort och gott siffror (eller i vissa fall strängar) som anvä
 
 För oss är detta svårt att förstå. Ger vi istället de magiska nummerna en kontext blir det betydligt mycket mer läsbart:
 
-    public class RequestTranslator {        
+    public class RequestTranslator {
               
          private static final String MONTHLY = "1";
          private static final String YEARLY = "2";
@@ -111,8 +110,7 @@ För oss är detta svårt att förstå. Ger vi istället de magiska nummerna en 
     _Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first
      argument is less than, equal to, or greater than the second._
    
- 5. Sortera listan i Main-klassen i TestCase genom att använda Collections sort-metod. Skriv sedan ut den sorterade
-  listan och säkerställ att figurerna nu skrivs ut i storleksordning.
+ 5. Sortera listan i Main-klassen i TestCase genom att använda Collections sort-metod. Skriv sedan ut den sorterade listan och säkerställ att figurerna nu skrivs ut i storleksordning.
 
 
 ### Pure functions & mutability
@@ -121,8 +119,7 @@ I så hög utsträckning som möjligt vill vi ha metoder som **inte** sparar dat
 
 1. Gör om formernas getArea-metoder så att de blir ”pure”, dvs att de inte sparar någon data.
 2. Ett bra sätt att undvika att spara data i en klass är att använda ett designmönster som brukar kallas för builder-pattern. En builder används istället för en klass vanliga konstruktor och fungerar så att den hela tiden returnerar
- sig själv. Det låter oss skriva metoder i en kedja och på så sätt sätta alla värden på builder-objektet. Objektet
-  skapas dock först när man anropar dess Build-funktion.
+ sig själv. Det låter oss skriva metoder i en kedja och på så sätt sätta alla värden på builder-objektet. Objektet skapas dock först när man anropar dess Build-funktion.
 Vi skall nu använda ett sådant mönster i someHelperClass för att skapa våra figur-objekt:
 
     1. Ladda ned addon:et InnerBuilder till Intellij
@@ -147,8 +144,7 @@ Samma metod fast med lambda:
         (number) -> x + 1; 
             
 1. Detta är användbart när man använder interfaces som bara kräver en metod. Då kan vi nämligen deklarera den metoden
- direkt, utan att behöva skapa nya filer, eller anonyma klasser. Använd nu lamda-syntaxen istället för
-  figur-komparatorn när ni sorterar listan med former och ta bort den gamla figur-komparatorn.
+ direkt, utan att behöva skapa nya filer, eller anonyma klasser. Använd nu lamda-syntaxen istället för figur-komparatorn när ni sorterar listan med former och ta bort den gamla figur-komparatorn.
 
 ## DATASAMLINGAR
 1. Gör nu övningarna i collections-paketet. Där finns instruktioner om hur ni skall lösa uppgifterna. Börja med
@@ -179,4 +175,5 @@ Samma metod fast med lambda:
  7. Get suggestions to fix error (Alt+Enter)
  8. Remove row (Ctrl + y)
  9. Highlight paragrath/words (Ctrl + Shift + Left/Right/Up/Down pointer)
- 10. Refactor varible name (rename)  Highlight varilble and (Shift + F&)
+ 10. Refactor varible name (rename) Highlight varilble and (Shift + F6)
+ 11 Alt + insert (auto generate constructor, getters, setters etc.)
