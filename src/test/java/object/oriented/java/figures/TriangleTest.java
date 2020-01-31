@@ -2,6 +2,7 @@ package object.oriented.java.figures;
 
 import object.oriented.java.SystemException;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

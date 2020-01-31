@@ -1,7 +1,8 @@
 ----
 #Lektion 2 & 3 - Java features
 
-Tanke på upplägg: Sitt två och två, alt. tre och tre. Läs uppgifterna tillsammans, försök förstå vad som menas med dem, **lös uppgifterna på egen hand** och diskutera därefter era lösningar och hur det ni just gjort relaterar till
+Tanke på upplägg: Sitt två och två, alt. tre och tre. Läs uppgifterna tillsammans, försök förstå vad som menas med
+ dem, **lös uppgifterna på egen hand** och diskutera därefter era lösningar och hur det ni just gjort relaterar till
  rubriken för uppgiften. Om någon hinner klart före kan den givetvis hjälpa den andra.
 
 Uppgifterna är uppdelade i olika koncept som alla har en parallell till Objekt-orienterad programmering och Java. Försök
@@ -10,12 +11,15 @@ att ta er tiden och förstå koncepten bakom frågorna, snarare än att bara lö
 Under den här lektionen kommer ni arbeta i mappen **object.oriented.java**.
 
 ### Access modifiers
-1. Använd Javas access modifiers (public, private, protected) för att enkapsulera de olika formernas instans
--variabler. Det vill säga, gör instansvariablerna privata och ge dessa publika getters och setter. Ge också klassen
- en konstruktor.
+1. Använd Javas access modifiers (public, private, protected) för att enkapsulera de olika formernas (Rectangle
+, Square och Triangle) instans-variabler. Det vill säga, gör instansvariablerna privata och ge dessa publika getters och
+ setter. Ge också klassen en konstruktor som tar in värden för de olika instansvariablerna. (Skriv gärna dessa själv
+  i en av formerna, sedan kan ni autogenerera dessa genom att högerklicka och välja generate (alt+insert || ^N)).
 
 2. Att enkapsulera en klass instansvariabel gör att vi får bättre kontroll över dessa. Ett exempel på detta är att vi
- kan kontrollera vilka värden som faktiskt sätts. Se nu till att triangeln och rektangeln inte får ha ett värde under 1 och inte över 256 som bas, detta är det högsta värdet som vår applikation anses klara av. Om något annat värde kommer in skall metoden inte sätta något värde!
+ kan kontrollera vilka värden som faktiskt sätts. Se nu till att triangeln och rektangeln som basinte får ha ett värde
+  under 1 och inte över 256, detta är det högsta värdet som vår applikation anses klara av. Om något annat värde
+ kommer in skall metoden inte sätta något värde!
 
 3. Ge triangeln två konstruktorer. En som tar både basen och höjden, och en som bara tar basen. Om den senare används
  skall höjden sättas till basen * 2.
@@ -25,17 +29,33 @@ Under den här lektionen kommer ni arbeta i mappen **object.oriented.java**.
 5. Flytta klassen ’SomeHelperClass’ till ett nytt paket, och döp paketet till något som ni tycker är lämpligt. Rätta
  till felen i someHelperClass så att de följer figurernas nya gränssnitt.
  
-6. Fundera på om ni kan göra något för att ge TestCase-klassen tillgång till getFigure-metoden i someHelperClass.
+6. Fixa så att someHelperClass använder sig av de nya konstruktor-APIerna för figurerna.
+ 
+7. Fundera på om ni kan göra något för att ge TestCase-klassen tillgång till getFigure-metoden i someHelperClass.
 
 ### Wrapperklasser & autoboxing
-1. Se till så att alla instansvariabler är av en rimlig typ. Tumregeln är att använda de primitiva typerna i den
- utsträckning som det går då wrappade typer generellt tar upp mer minne. Tänk på att de primitiva typerna inte kan vara null.
+1. Se till så att alla instansvariabler är av en rimlig typ. Se även till att era setters, getters och konstruktorer
+ tar in värden av rimliga typer. Tumregeln är att använda de primitiva typerna i den utsträckning som det går d
+ å wrappade typer generellt tar upp mer minne. Tänk på att de primitiva typerna inte kan vara null. Glöm inte att
+  kika så att det fortfarande stämmer i SomeHelperClass.
  
-2. Se nu till att figurerna har flera olika setters som klarar av olika typ av input. Dessa skall klara av att få in Integers, Doubles och värden i form av strängar. _Till exempel: setBase(String base), setBase(Integer base), setBase(Double base)_.
- Wrapperklasserna har en valueOf()-metod som kan komma till användning. Det kan även komma att bli nödvändigt att casta typer på andra vis. Se till att fånga upp eventuella fel som kan tänkas uppkomma, som till exempel om en sträng innehåller annat än bara siffror och punkter, eller är null.
+2. Se nu till att figurerna har flera olika setters som klarar av olika typ av input. Dessa skall klara av att få in
+ Integers, Doubles och värden i form av strängar.
  
-3. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta löser Java åt oss och det är det som kallas för **autoboxing**, dvs när en primitiv typ görs om till en _wrapper-typ_, eller _unboxing_ som är motsatsen.
-4. Se till så att logiken ni lade till i de olika set-metoderna fungerar genom att avkommentera enhetstesterna för de
+ _Till exempel: setBase(String base), setBase(Integer base), setBase(Double base)_.
+
+Wrapperklasserna har en valueOf()-metod som kan komma till användning. Det kan även komma att bli nödvändigt att
+  casta typer på andra vis. Se till att fånga upp eventuella fel som kan tänkas uppkomma, som till exempel om en str
+  äng innehåller annat än bara siffror och punkter, eller är null.
+ 
+3. Lägg märke till att det inte krävs någon speciell omvandling mellan en primitiv typ och dess wrapperklass. Detta l
+öser Java åt oss och det är det som kallas för **autoboxing**, dvs när en primitiv typ görs om till en _wrapper-typ_
+, eller _unboxing_ som är motsatsen.
+
+4. Skaffa ett kortkommando ('Comment with line comment'). för att kommentera eller avkommentera kod (eller använd
+ default-kommandot, om det fungerar).
+
+5. Se till så att logiken ni lade till i de olika set-metoderna fungerar genom att avkommentera enhetstesterna för de
  olika figurerna och se till så att dessa går igenom.
 
 ### Magic numbers
@@ -80,10 +100,13 @@ För oss är detta svårt att förstå. Ger vi istället de magiska nummerna en 
          }
     }
 
-1. Diskutera om det finns några nummer i er kod som skulle kunna brytas ut till konstanter för att göra koden mer läsbar. Om ni hittar några sådana exempel, gör om dessa.
+1. Diskutera om det finns några nummer i er kod som skulle kunna brytas ut till konstanter för att göra koden mer l
+äsbar. Om ni hittar några sådana exempel, gör om dessa.
 
 ### Abstrakta klasser & Interfaces
-1.	En fördel med abstrakta klasser är att man kan definiera beteenden som alla sub-klasser får. Gör nu om Figure-interfacet till en abstrakt klass och se om det är någon logik som implementerats fler än en gång, som går att bryta ut och lägga i er nya superklass.
+1.	En fördel med abstrakta klasser är att man kan definiera beteenden som alla sub-klasser får. Gör nu om Figure
+-interfacet till en abstrakt klass och se om det är någon logik som implementerats fler än en gång, som går att bryta
+ ut och lägga i er nya superklass.
 2. Se till så att testerna fortfarande går igenom.
 3. Interfaces är någon som kan upplevas som krångligt, men som egentligen är ett ganska enkelt koncept. Det ett
  interface gör är att definiera ett antal metod-signaturer med inparametrar, namn och returtyp som en klass som
@@ -110,7 +133,8 @@ För oss är detta svårt att förstå. Ger vi istället de magiska nummerna en 
     _Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first
      argument is less than, equal to, or greater than the second._
    
- 5. Sortera listan i Main-klassen i TestCase genom att använda Collections sort-metod. Skriv sedan ut den sorterade listan och säkerställ att figurerna nu skrivs ut i storleksordning.
+ 5. Sortera listan i Main-klassen i TestCase genom att använda Collections sort-metod. Skriv sedan ut den sorterade
+  listan och säkerställ att figurerna nu skrivs ut i storleksordning.
 
 
 ### Pure functions & mutability
@@ -144,7 +168,8 @@ Samma metod fast med lambda:
         (number) -> x + 1; 
             
 1. Detta är användbart när man använder interfaces som bara kräver en metod. Då kan vi nämligen deklarera den metoden
- direkt, utan att behöva skapa nya filer, eller anonyma klasser. Använd nu lamda-syntaxen istället för figur-komparatorn när ni sorterar listan med former och ta bort den gamla figur-komparatorn.
+ direkt, utan att behöva skapa nya filer, eller anonyma klasser. Använd nu lamda-syntaxen istället för figur
+ -komparatorn när ni sorterar listan med former och ta bort den gamla figur-komparatorn.
 
 ## DATASAMLINGAR
 1. Gör nu övningarna i collections-paketet. Där finns instruktioner om hur ni skall lösa uppgifterna. Börja med
@@ -176,4 +201,4 @@ Samma metod fast med lambda:
  8. Remove row (Ctrl + y)
  9. Highlight paragrath/words (Ctrl + Shift + Left/Right/Up/Down pointer)
  10. Refactor varible name (rename) Highlight varilble and (Shift + F6)
- 11 Alt + insert (auto generate constructor, getters, setters etc.)
+ 11. Alt + insert (auto generate constructor, getters etc)

@@ -13,7 +13,6 @@ Java som vi använder för att styra kodens flöde. Detta innefattar if-satser, 
   
         git clone [länken från stash]
         
-       
 #### Öppna projektet i IntelliJ
 1. Öppna intelli J
 2. Gå till file > open _(eller tryck på open direkt)_
@@ -23,21 +22,17 @@ Java som vi använder för att styra kodens flöde. Detta innefattar if-satser, 
 5. Se till att din "Test"-mapp är markerad som Test Sources Root (genom att högerklicka på Test-mappen och välja "Mark Directory as").
 6. På samma sätt se till att "src"-mappen är markaderad som "Generated Sources Root" 
 
-### Create a feature branch
-Innan vi börjar skapar vi en feature branch. Denna kan ni ha lokalt på er dator fram till dess att ni skapar en pull request som en kollega får godkänna! (Detta kan göras via Stash också.)
+### Skapa en feature-branch
+Innan vi börjar skall alla skapa var sin feature-branch. Detta är eran egen branch där ni kan ha era ändringar. Efter
+ att ni slutfört alla uppgifter i en fil så skall dessa commitas och sen pushas, det bör ni även göra innan kurs
+ -tillfället avslutas. Längre fram i kursen kommer vi att göra en pull request i en annan branch, som en kollega sen kommer att få godkänna.
 
-1. Dra ner pom-filen i terminal så att du hmnar i rätt repository.
-2. git branch -a (ger dig alla lokala och onsite brancher)
-3. skriv git checkout feature/{namn_på_din_branch} -b (nu har du således skapar och ställt dig i din nya branch)
-4. Nu kan du börja koda! Om du inte pushar den kan ingen se ditt arbete. Se till att spara ditt arbete under tiden genom att köra "git commit -am "ett bra commit meddelande". OBS! genom att köra "-am" så commiar du alla ändringar samtiigt. Då är det enklare att använda sig av Version Control (Alt + 9) och högerklicka på respektive klasser.
-
-OBS! Om detta är svårt att förstå så förklarar vi gärna tydligare!
-
-
-//TODO: caroline sätt upp feature branch
-
-
-
+1. Navigera till rätt mapp i din favoritterminal. Detta kan du till exempel göra genom att dra ner pom-filen i
+ intellijs integrerarde terminal.
+2. _git branch -a_ (ger dig alla brancher, lokala såsom remota)
+3. Skriv _git checkout feature/{namn_på_din_branch} -b_. -b-flaggan gör att du direkt kommer stå i den nya branchen
+ och få med dig eventuella ändringar du har lokalt.
+4. Kolla att du nu är i rätt branch genom att skriva _git branch_.
 
 #### Testa att köra testerna
 1. Öppna _src > test > control.flow_
@@ -62,5 +57,3 @@ Det kan vara till hjälp att tjuvkika på testerna.
 8. Remove row (Ctrl + y) 
 9. Highlight paragrath/words (Ctrl + Shift + Left/Right/Up/Down pointer)
 10. Refactor varible name (rename)  Highlight varilble and (Shift + F&)
-
-
