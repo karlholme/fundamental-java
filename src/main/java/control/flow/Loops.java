@@ -13,12 +13,7 @@ public class Loops {
      *  Denna metod skall summera alla tal i en lista som skickas in.
      */
     public int sumArrayOfIntegers(int[] numbers) {
-        int total = 0;
-
-        for (int number : numbers) {
-            total += number;
-        }
-        return total;
+        return 0;
     }
 
     /*
@@ -34,12 +29,7 @@ public class Loops {
      *    for(itemInList x : list) {}
      */
     public boolean containsUsingForEach(List<String> collection, String item) {
-        for (String word : collection) {
-            if (word.equals(item)) {
-                return true;
-            }
-        }
-        return false;
+        return true;
     }
 
     /*
@@ -48,16 +38,7 @@ public class Loops {
      *    while(condition) {}
      */
     public boolean containsUsingWhile(List<String> numbers, String item) {
-
-        int index = 0;
-
-        while (index < numbers.size()) {
-            if (numbers.get(index).equals(item)) {
-                return true;
-            }
-            index++;
-        }
-        return false;
+        return true;
     }
 
     /*
