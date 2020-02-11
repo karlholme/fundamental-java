@@ -1,11 +1,13 @@
 package collections;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.*;
 
 import static org.junit.Assert.*;
 
+@Ignore
 public class SetInterfaceExercisesTest {
 
     SetInterfaceExercises setInterfaceExercises = new SetInterfaceExercises();

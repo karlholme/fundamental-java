@@ -1,6 +1,7 @@
 package dependency.injection;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -15,6 +16,7 @@ import static org.mockito.Mockito.when;
     Den här test-klassen är ett exempel på hur man använder Mockito för att mocka klassen man vill testas omgivning.
     På så sätt slipper man skapa upp en hela universum för att testa en den lilla klassen på toppen.
  */
+@Ignore
 public class GetAccountsServiceTest {
 
     @Mock

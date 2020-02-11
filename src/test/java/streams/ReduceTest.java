@@ -1,5 +1,6 @@
 package streams;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -7,6 +8,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+@Ignore
 public class ReduceTest {
 
     Reduce reduce = new Reduce();
