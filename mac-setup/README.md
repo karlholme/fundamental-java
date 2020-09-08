@@ -24,7 +24,7 @@ If you dont have maven installed
 
 ### Maven settings
 Maven has to be configured with a settings file. Download maven/settings.xml file from
-[here](http://cuso.edb.se/stash/projects/ENMI/repos/environment.development/browse/maven?at=refs%2Fheads%2Fdevelop) to ~/.m2/settings.xml
+[here](https://cusobitbucket.evry.com/projects/ENMI/repos/environment.development/browse/maven?at=refs%2Fheads%2Fdevelop) to ~/.m2/settings.xml
 Remove the override of `<localRepository>` in the settings.xml file. If you dont know your home folder (~/) type 'echo ~' into your favorit terminal.
 
 ## IntelliJ
@@ -62,7 +62,7 @@ If you don't have IntelliJ,
     1. Click OK
     
 #### Ladda ned koden
- 1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
+ 1. Gå till: https://cusobitbucket.evry.com/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
  2. Clona git länken för repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
  3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevTools", och skriv kommandot:
             

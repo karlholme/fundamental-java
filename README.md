@@ -85,42 +85,48 @@ If you did not see something like "Apache Maven 3.6.0. ..", install mvn:
     1. Select Maven 3.6.0. (Binary zip)
     1. Follow installation instructions on download page
 	
-IntelliJ
+## IntelliJ
 Check if IntelliJ is installed:
 
-Press Start
-All programs
-Check if you have a Jetbrains folder containing a IntelliJ IDEA 1. .1. version
-If not, install IntelliJ:
+- Press Start
+- All programs
+- Check if you have a Jetbrains folder containing a IntelliJ IDEA 1. .1. version
+- If not, install IntelliJ:
 
-Download Intellij Ultimate Edition
-Follow installation instructions
-Use cuso licence server
-When you first start Intellij, it will ask you for a licence
-Click "Use licence server"
-In the server address field, paste the address http://cuso.edb.se/licenseserver
-Click OK (don't click "discover server")
-Setup IntelliJ
-Windows tweak
-IntelliJ will save its internal stuff in a directory called somthing like .IntelliJIdea2018.3. By default it will reside in your home directory but again it will be subject to the malware scanned. Do you want to avoid that do as follows.
+1. Download Intellij Ultimate Edition
+2. Follow installation instructions
+3. Use cuso licence server
+4. When you first start Intellij, it will ask you for a licence
+5. Click "Use licence server"
+6. In the server address field, paste the address http://cuso.edb.se/licenseserver
+7. Click OK (don't click "discover server")
+8. Setup IntelliJ
+9. Windows tweak
+10. IntelliJ will save its internal stuff in a directory called somthing like .IntelliJIdea2018.3. By default it will
+ reside in your home directory but again it will be subject to the malware scanned. Do you want to avoid that do as
+  follows:
 
-Move the .IntelliJIdea2018.3 or similar named directory from your home directory (In windows something like C:\Users\E606194) to C:\Devstuff
-Open the file idea.properties in the directory called similar to C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2\bin in your editor.
-Find the string idea.config.path and uncomment the line.
-Replace the path with the /Devstuff/.IntelliJIdea2018.3/config (or similar named directory)
-Find the string idea.system.path and uncomment the line.
-Replace the path with the /Devstuff/.IntelliJIdea2018.3/system (or similar named directory)
-Save the idea.properties file.
-Minimal setup
-Open IntelliJ
-Select File->Settings->Build, Execution, Deployment-> Build Tools->Maven
-Next to the field "User settings file", check the box "override" and write: "C:\DevStuff\tools\maven-repo\settings.xml" (without quotes)
-Next to the field "Local repository", check the box "override" and write: "C:\DevStuff\tools\maven_repo\repository" (without quotes)
-Click Apply
-Click OK
+- Move the .IntelliJIdea2018.3 or similar named directory from your home directory (In windows something like C:\Users
+\E606194) to C:\Devstuff
+- Open the file idea.properties in the directory called similar to C:\Program Files\JetBrains\IntelliJ IDEA 2018.3.2
+\bin in your editor.
+- Find the string idea.config.path and uncomment the line.
+- Replace the path with the /Devstuff/.IntelliJIdea2018.3/config (or similar named directory)
+- Find the string idea.system.path and uncomment the line.
+- Replace the path with the /Devstuff/.IntelliJIdea2018.3/system (or similar named directory)
+- Save the idea.properties file.
+- Minimal setup
+- Open IntelliJ
+- Select File->Settings->Build, Execution, Deployment-> Build Tools->Maven
+- Next to the field "User settings file", check the box "override" and write: "C:\DevStuff\tools\maven-repo\settings
+.xml" (without quotes)
+- Next to the field "Local repository", check the box "override" and write: "C:\DevStuff\tools\maven_repo\repository
+" (without quotes)
+- Click Apply
+- Click OK
 
 #### Ladda ned koden
- 1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
+ 1. Gå till: https://cusobitbucket.evry.com/users/e605363/repos/fundamental-java/browse (om du inte redan är här)
  2. Clona git länken för repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
  3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevStuff", och skriv kommandot:
        		
@@ -135,7 +141,7 @@ Click OK
 Detta skall göra att intelliJ hämtar koden för de beroenden vi har, och kompillerar allt åt oss.
 
 #### Testa att köra testerna
-1. Öppna _src > test > control.flow_
+1. Öppna _src > test > java > control.flow_
 2. Högerklicka på mappen _'control.flow'_ och välj _'Run tests in 'control.flow''_.
 
     2a. Om alternativet inte finns, välj 'Mark directory as > Test', och testa igen.

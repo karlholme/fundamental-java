@@ -5,7 +5,7 @@ Under det första tillfället kommer vi gå igenom vad vi kallar för control fl
 Java som vi använder för att styra kodens flöde. Detta innefattar if-satser, switch-satser och olika loopar.
 
 #### Ladda ned koden
- 1. Gå till: http://cuso.edb.se/stash/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
+ 1. Gå till: https://cusobitbucket.evry.com/users/e605363/repos/fundamental-java/browse (om du inte redan är där)
  2. Clona repot genom att trycka på "ladda ned"-ikonen under din profilbild längst upp till vänster.
  3. Öppna din favoritteminal, navigera till en lämplig mapp, förslagsvis under "C:/DevTools", och skriv kommandot:
        		
