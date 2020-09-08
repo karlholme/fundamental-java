@@ -34,7 +34,7 @@ public class IfStatements {
      *      - Trainee är de som jobbat ett år eller mindre
      *      - Junior är de som jobbat mer än ett men 3 eller färre år
      *      - Standard är de som jobbat mer än 3, men mindre, eller = med 5
-     *      - Senior är de som jobbat minst 5 år.
+     *      - Senior är de som jobbat mer än 5 år.
      */
     public String classifyConsultant(int yearsOfExperience) {
         return null;
