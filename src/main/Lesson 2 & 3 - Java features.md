@@ -24,7 +24,7 @@ Under den här lektionen kommer ni arbeta i mappen **object.oriented.java**.
 3. Ge triangeln två konstruktorer. En som tar både basen och höjden, och en som bara tar basen. Om den senare används
  skall höjden sättas till basen * 2.
 
-4. Se nu till att fyrkanten (Rectangle) bara får ha jämna värden som höjd.
+4. Se nu till att rektangeln bara får ha jämna värden som höjd.
 
 5. Flytta klassen ’SomeHelperClass’ till ett nytt paket, och döp paketet till något som ni tycker är lämpligt. Rätta
  till felen i someHelperClass så att de följer figurernas nya gränssnitt.
