@@ -17,7 +17,7 @@ Under den här lektionen kommer ni arbeta i mappen **object.oriented.java**.
   i en av formerna, sedan kan ni autogenerera dessa genom att högerklicka och välja generate (alt+insert || ^N)).
 
 2. Att enkapsulera en klass instansvariabel gör att vi får bättre kontroll över dessa. Ett exempel på detta är att vi
- kan kontrollera vilka värden som faktiskt sätts. Se nu till att triangeln och rektangeln som basinte får ha ett värde
+ kan kontrollera vilka värden som faktiskt sätts. Se nu till att triangeln och rektangeln som bas inte får ha ett värde
   under 1 och inte över 256, detta är det högsta värdet som vår applikation anses klara av. Om något annat värde
  kommer in skall metoden inte sätta något värde!
 
@@ -31,13 +31,14 @@ Under den här lektionen kommer ni arbeta i mappen **object.oriented.java**.
  
 6. Fixa så att someHelperClass använder sig av de nya konstruktor-APIerna för figurerna.
  
-7. Fundera på om ni kan göra något för att ge TestCase-klassen tillgång till getFigure-metoden i someHelperClass.
+7. Fundera på om ni kan göra något för att ge TestCase-klassen tillgång till getFigure-metoden i someHelperClass (om
+ ni inte redan gjort detta).
 
 ### Wrapperklasser & autoboxing
-1. Se till så att alla instansvariabler är av en rimlig typ. Se även till att era setters, getters och konstruktorer
- tar in värden av rimliga typer. Tumregeln är att använda de primitiva typerna i den utsträckning som det går d
- å wrappade typer generellt tar upp mer minne. Tänk på att de primitiva typerna inte kan vara null. Glöm inte att
-  kika så att det fortfarande stämmer i SomeHelperClass.
+1. Se till så att alla instansvariabler är av vad ni anser vara en rimlig typ. Se även till att era setters, getters
+ och konstruktorer tar in värden av rimliga typer. Tumregeln är att använda de primitiva typerna i den utsträckning
+ som det går då wrappade typer generellt tar upp mer minne. Tänk på att de primitiva typerna inte kan vara null. Gl
+ öm inte att kika så att allt fortfarande stämmer i SomeHelperClass.
  
 2. Se nu till att figurerna har flera olika setters som klarar av olika typ av input. Dessa skall klara av att få in
  Integers, Doubles och värden i form av strängar.
@@ -59,9 +60,9 @@ Wrapperklasserna har en valueOf()-metod som kan komma till användning. Det kan 
  olika figurerna och se till så att dessa går igenom.
 
 ### Magic numbers
-Magic numbers är kort och gott siffror (eller i vissa fall strängar) som används i koden för att uppfylla ett visst
- syfte, men vars syfte är svårt att förstå genom att enbart läsa koden. Därför är det trevligt att bryta ut dessa
- till konstanter, och ge dem ett namn som ger en hint om dess syfte. Här är ett exempel:
+Magic numbers är kort och gott siffror (eller i vissa fall strängar) vars syfte är svårt att förstå genom att enbart
+ se de i koden. Därför är det trevligt att bryta ut dessa till konstanter, och ge dem ett namn som förklarar dess
+  mening. Här är ett exempel från en DSL bank-tjänst:
 
     public class RequestTranslator {
             
@@ -101,7 +102,7 @@ För oss är detta svårt att förstå. Ger vi istället de magiska nummerna en 
     }
 
 1. Diskutera om det finns några nummer i er kod som skulle kunna brytas ut till konstanter för att göra koden mer l
-äsbar. Om ni hittar några sådana exempel, gör om dessa.
+äsbar. Om ni hittar några sådana exempel, gör om dessa, annars är det bara att fortsätta.
 
 ### Abstrakta klasser & Interfaces
 1.	En fördel med abstrakta klasser är att man kan definiera beteenden som alla sub-klasser får. Gör nu om Figure
