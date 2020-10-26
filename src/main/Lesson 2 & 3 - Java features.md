@@ -140,11 +140,15 @@ För oss är detta svårt att förstå. Ger vi istället de magiska nummerna en 
 
 ### Pure functions & mutability
 I så hög utsträckning som möjligt vill vi ha metoder som **inte** sparar data i muterbar form. Det ökar risken för att
- data ligger kvar i senare skeden, är svårare att testa och ger upphov till fel som är svåra att identifiera. Istället vill vi ha vad som brukar kallas för ”pure functions”. Utmärkande för dessa är att de endast påverkas av den data de får in. **En viss indata ger alltså alltid samma utdata.**
+ data ligger kvar i senare skeden, är svårare att testa och ger upphov till fel som är svåra att identifiera. Iställe
+ vill vi ha vad som brukar kallas för ”pure functions”. Utmärkande för dessa är att de endast påverkas av den data de
+ får in. **En viss indata ger alltså alltid samma utdata.**
 
 1. Gör om formernas getArea-metoder så att de blir ”pure”, dvs att de inte sparar någon data.
-2. Ett bra sätt att undvika att spara data i en klass är att använda ett designmönster som brukar kallas för builder-pattern. En builder används istället för en klass vanliga konstruktor och fungerar så att den hela tiden returnerar
- sig själv. Det låter oss skriva metoder i en kedja och på så sätt sätta alla värden på builder-objektet. Objektet skapas dock först när man anropar dess Build-funktion.
+2. Ett bra sätt att undvika att spara data i en klass är att använda ett designmönster som brukar kallas för
+builder-pattern. En builder används istället för en klass vanliga konstruktor och fungerar så att den hela tiden returnerar
+ sig själv. Det låter oss skriva metoder i en kedja och på så sätt sätta alla värden på builder-objektet. Objektet skapas
+ dock först när man anropar dess Build-funktion.
 Vi skall nu använda ett sådant mönster i someHelperClass för att skapa våra figur-objekt:
 
     1. Ladda ned addon:et InnerBuilder till Intellij
@@ -157,8 +161,9 @@ Vi skall nu använda ett sådant mönster i someHelperClass för att skapa våra
     4. Se till att TestCase fortfarande skriver ut formerna i storleksordning.
 
 ## LAMBDA:
-Lambda-uttryck är ett sätt att deklarera en funktion direkt i koden. Istället för att behöva skriva en metodsignatur
- på en rad, och sedan metodkroppen på efterföljande rader, kan man nu lösa allt detta på en enstaka rad. Till exempel;
+Lambda-uttryck är ett sätt att deklarera en funktion anonymt, direkt i koden. Istället för att behöva skriva en
+ metodsignatur på en rad, och sedan metodkroppen på efterföljande rader, kan man nu lösa allt detta på en enstaka rad
+ . Till exempel: 
 
         public String addOne(int number){
             return number + 1;
