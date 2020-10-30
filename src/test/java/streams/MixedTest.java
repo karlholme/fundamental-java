@@ -23,13 +23,12 @@ public class MixedTest {
 
     @Test
     public void getAllPersonsWithFiveLettersSortedTest() {
-        assertEquals(mixed.getAllPersonsWithFiveLettersSorted(participantNames), Arrays.asList("simon", "sofia", "yngve"));
+        assertEquals(Arrays.asList("simon", "sofia", "yngve"), mixed.getAllPersonsWithFiveLettersSorted(participantNames));
     }
 
     @Test
     public void getAllPersonsThatDontStartWithSInCAPITALSTest() {
-        assertEquals(mixed.getAllPersonsThatDontStartWithSInCAPITALS(participantNames),
-                Arrays.asList("CAROLINE", "KARL", "KARL", "MORGAN", "REBECCA", "YNGVE"));
+        assertEquals(Arrays.asList("CAROLINE", "KARL", "KARL", "MORGAN", "REBECCA", "YNGVE"), mixed.getAllPersonsThatDontStartWithSInCAPITALS(participantNames));
     }
 
     @Test
