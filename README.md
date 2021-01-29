@@ -29,26 +29,16 @@ Post installation configuration:
 * The following needs to be configured from either Bash (if *Bash only* was selected) or your favorite terminal:
 
 		git config --global user.name "Firstname Lastname"
-		git config --global user.email "firstname.lastname@evry.com"
+		git config --global user.email "firstname.lastname@tietoevry.com"
 
 	To support long paths/file names in Windows when cloning repos/checking out branches, issue the following command (long paths might still break other programs):
 
 		git config --global core.longpaths true
-  
-## Git Credential Manager for Windows (previous git-credential-winstore)
-If not installed..., install Git Credential Manager for Windows: 
-
-1. Browse to [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases)
-1. Download GCMW-1.10.0.exe
-1. Run the installation file (accept licence agreement and then hit next. Then Finish.
- 
-installera windows environment installer  
  
 ## Java
 Check if you have java 1.8 installed:
   
-1. Press Start
-1. Command Prompt
+1. Open you favorite terminal
 1. Write "java -version" and press enter
 
 If you see something like "java version 1.8...", also make sure you have a JDK installed. 
@@ -78,7 +68,7 @@ Check if maven is installed:
 1. Command Prompt
 1. Write "mvn --version" and press enter
 
-If you see something like "Apache Maven 3.6.0. .." skip down to "2. Setup Maven settings.xml"
+If you see something like "Apache Maven 3.6.0. .." you already have maven installed and can skip this step!
 
 If you did not see something like "Apache Maven 3.6.0. ..", install mvn:
 
