@@ -5,8 +5,9 @@ These installation instructions are for Windows, if you are using a Mac go to fo
 Check if git is installed:
 
 1. Press Start
-1. All programs
-1. Check if you have a Git folder containing a Git Bash program
+1. Type 'cmd' and press enter
+1. In the terminal that opens, type 'git --version' and press Enter.
+1. If you have git installed you should see the git version.
 
 If not, install git:
 
