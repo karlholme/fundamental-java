@@ -74,7 +74,7 @@ If you did not see something like "Apache Maven 3.6.0. ..", install mvn:
 
 1. Download [maven](http://maven.apache.org/download.cgi)
     1. Select Maven 3.6.0. (Binary zip)
-    1. Follow installation instructions on download page
+    1. Follow installation instructions [here](http://maven.apache.org/install.html)
 	
 ## IntelliJ
 Check if IntelliJ is installed:
