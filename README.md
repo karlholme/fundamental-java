@@ -89,7 +89,7 @@ Check if IntelliJ is installed:
 3. Use cuso licence server
 4. When you first start Intellij, it will ask you for a licence
 5. Click "Use licence server"
-6. In the server address field, paste the address http://cuso.edb.se/licenseserver
+6. In the server address field, paste the address http://fslicense.evry.com:8080/
 7. Click OK (don't click "discover server")
 8. Setup IntelliJ
 9. Windows tweak
